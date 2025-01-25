@@ -10,6 +10,7 @@ import { LoginRegisterComponent } from './login-register/login-register/login-re
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './services/token.interceptor';
 import { HttpClientModule,provideHttpClient, withFetch  } from '@angular/common/http';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 
 
@@ -30,7 +31,8 @@ import { HttpClientModule,provideHttpClient, withFetch  } from '@angular/common/
   providers: [
     provideClientHydration(),
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
-    provideHttpClient(withFetch())
+    provideHttpClient(withFetch()),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

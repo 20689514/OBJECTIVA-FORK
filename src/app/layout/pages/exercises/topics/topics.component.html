@@ -1,10 +1,10 @@
-<div class="background-container">
+<div class="background-container" *ngIf="showContainer">
     <div class="container">
         <h1>Object-Oriented Programming Exercises</h1>
         <p class="description">Test your understanding of Object-Oriented Programming concepts with these engaging exercises.</p>
     
         <div class="exercise-grid">
-            <div class="exercise-item">
+            <div class="exercise-item" (click)="navigateTo()">
                 <div class="exercise-icon">📒</div>
                 <div class="exercise-title">Introduction to Object-Oriented Programming</div>
                 <div class="exercise-desc">Learn the basics of object-oriented programming concepts.</div>
@@ -37,3 +37,4 @@
         </div>
     </div>
 </div>
+<router-outlet></router-outlet>

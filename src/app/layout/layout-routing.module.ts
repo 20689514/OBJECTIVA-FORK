@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LayoutComponent } from './layout.component';
 import { QuizComponent } from './pages/quiz/quiz.component'; 
 
+
 const routes: Routes = [
   {
     path: '',

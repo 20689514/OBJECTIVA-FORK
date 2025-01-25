@@ -3,15 +3,18 @@ import { CommonModule } from '@angular/common';
 
 import { TopicsRoutingModule } from './topics-routing.module';
 import { TopicsComponent } from './topics.component';
+import { InheritanceExercisesModule } from './inheritance-exercises/inheritance-exercises.module';
 
 
 @NgModule({
   declarations: [
-    TopicsComponent
+    TopicsComponent,
   ],
   imports: [
     CommonModule,
-    TopicsRoutingModule
+    TopicsRoutingModule,
+    InheritanceExercisesModule
+
   ]
 })
 export class TopicsModule { }

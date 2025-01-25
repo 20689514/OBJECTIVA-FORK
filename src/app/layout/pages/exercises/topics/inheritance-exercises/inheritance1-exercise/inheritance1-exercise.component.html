@@ -1,0 +1,33 @@
+<div class="exercise-container">
+  <h1>Drag and Drop: Categorize OOP Concepts</h1>
+  <div class="categories">
+    <div
+      class="category"
+      *ngFor="let category of categories"
+      cdkDropList
+      [cdkDropListData]="category.items"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <h3>{{ category.name }}</h3>
+      <div class="dropzone">
+        <div
+          class="item"
+          *ngFor="let item of category.items"
+          cdkDrag
+        >
+          {{ item }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="drag-items" cdkDropList [cdkDropListData]="items" (cdkDropListDropped)="drop($event)">
+    <h3>Drag these items:</h3>
+    <div
+      class="item"
+      *ngFor="let item of items"
+      cdkDrag
+    >
+      {{ item }}
+    </div>
+  </div>
+</div>

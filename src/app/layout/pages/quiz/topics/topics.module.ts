@@ -11,7 +11,6 @@ import { TopicsComponent } from './topics.component';
 
 @NgModule({
   declarations: [
-    
   
     TopicsComponent
   ],
