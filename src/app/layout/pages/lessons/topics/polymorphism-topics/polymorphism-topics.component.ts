@@ -1,6 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LessonProgressService } from '../../../../../services/lesson-progress.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-polymorphism-topics',
@@ -8,7 +9,9 @@ import { LessonProgressService } from '../../../../../services/lesson-progress.s
   styleUrl: './polymorphism-topics.component.scss'
 })
 export class PolymorphismTopicsComponent implements OnInit {
-  constructor(private router: Router, private progressService: LessonProgressService) {} 
+  constructor(private router: Router, private progressService: LessonProgressService, private title: Title) {
+    this.title.setTitle('Learn Polymorphism | Objectiva');
+  } 
   lessonProgress: { [key: string]: boolean } = {}; // copy
 
   showBackgroundContainer: boolean = false;

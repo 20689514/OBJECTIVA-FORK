@@ -1,38 +1,28 @@
 <div class="background-container" *ngIf="showContainer">
     <div class="container">
-        <h1>Object-Oriented Programming Exercises</h1>
+        <h1>OBJECTIVA's Exercises</h1>
         <p class="description">Test your understanding of Object-Oriented Programming concepts with these engaging exercises.</p>
     
-        <div class="exercise-grid">
-            <div class="exercise-item" (click)="navigateTo()">
-                <div class="exercise-icon">📒</div>
-                <div class="exercise-title">Introduction to Object-Oriented Programming</div>
-                <div class="exercise-desc">Learn the basics of object-oriented programming concepts.</div>
+        <div class="exercise-grid" >
+            <div class="exercise-item" (click)="startExercise1()">
+                <div class="exercise-icon"><i class="fas fa-layer-group"></i></div>
+                <div class="exercise-title">ABSTRACTION</div>
+                <!-- <div class="exercise-desc">Lorem Ipsum</div> -->
             </div>
-            <div class="exercise-item">
-                <div class="exercise-icon">📘</div>
-                <div class="exercise-title">Classes and Objects</div>
-                <div class="exercise-desc">Learn the basics of creating and using classes and objects.</div>
+            <div class="exercise-item" (click)="startExercise2()">
+                <div class="exercise-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="exercise-title">ENCAPSULATION</div>
+                <!-- <div class="exercise-desc">Lorem Ipsum</div> -->
             </div>
-            <div class="exercise-item">
-                <div class="exercise-icon">📗</div>
-                <div class="exercise-title">Inheritance</div>
-                <div class="exercise-desc">Understand how to reuse code through inheritance.</div>
+            <div class="exercise-item" (click)="startExercise3()">
+                <div class="exercise-icon"><i class="fas fa-sitemap"></i></div>
+                <div class="exercise-title">INHERITANCE</div>
+                <!-- <div class="exercise-desc">Lorem Ipsum</div> -->
             </div>
-            <div class="exercise-item">
-                <div class="exercise-icon">📙</div>
-                <div class="exercise-title">Polymorphism</div>
-                <div class="exercise-desc">Explore method overriding and dynamic behavior in OOP.</div>
-            </div>
-            <div class="exercise-item">
-                <div class="exercise-icon">📕</div>
-                <div class="exercise-title">Encapsulation</div>
-                <div class="exercise-desc">Learn how to protect data using access modifiers.</div>
-            </div>
-            <div class="exercise-item">
-                <div class="exercise-icon">📒</div>
-                <div class="exercise-title">Abstraction</div>
-                <div class="exercise-desc">Practice abstract classes and interfaces.</div>
+            <div class="exercise-item" (click)="startExercise4()">
+                <div class="exercise-icon"><i class="fas fa-random"></i></div>
+                <div class="exercise-title">POLYMORPHISM</div>
+                <!-- <div class="exercise-desc">Lorem Ipsum</div> -->
             </div>
         </div>
     </div>

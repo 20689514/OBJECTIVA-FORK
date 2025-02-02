@@ -12,7 +12,7 @@
             <p>Method overloading is like a Swiss Army knife with multiple tools (compile-time), while method overriding is like a custom-built tool that replaces a standard one for a specific job (runtime).</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s2')" *ngIf="visibleSections === 2">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s2')" *ngIf="visibleSections === 2" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -23,7 +23,7 @@
             <p>Method overloading happens when you define multiple methods with the same name but different parameters (number or type). The appropriate method is chosen by the compiler based on the method call.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s3')" *ngIf="visibleSections === 3">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s3')" *ngIf="visibleSections === 3" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -57,7 +57,7 @@ public class Main {{'{'}}
             </code></pre>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s4')" *ngIf="visibleSections === 4">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s4')" *ngIf="visibleSections === 4" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -68,7 +68,7 @@ public class Main {{'{'}}
             <p>Method overriding occurs when a subclass provides its specific implementation of a method that is already defined in its parent class. The appropriate method is based on the actual object type, not the reference type.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s5')" *ngIf="visibleSections === 5">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s5')" *ngIf="visibleSections === 5" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -111,7 +111,7 @@ public class Main {{'{'}}
             </code></pre>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s6')" *ngIf="visibleSections === 6">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s6')" *ngIf="visibleSections === 6" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -175,8 +175,92 @@ public class Main {{'{'}}
             </code></pre> 
         </div>
         <div class="button-container">
-            <button routerLink='/lessons/topics/polymorphism' *ngIf="visibleSections === 7">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s7')" *ngIf="visibleSections === 7" class="next-image" alt="Next">
           </div>
     </section>
 
+    <section id="s7" class="lesson-section" *ngIf="visibleSections >= 8">
+        <div class="content-container">
+            <h1>Best Practices</h1>
+            <p>Here are some of best practices when using polymorphism</p>
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/b1-polymorphism.png" alt="">
+                    <h2>Use Interfaces and Abstract Classes</h2>
+                    <p>Define common behaviors using interfaces or abstract classes to ensure a consistent API across different</p>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/b2-polymorphism.png" alt="">
+                    <h2>Use Method Overloading for Compile-Time Polymorphisme</h2>
+                    <p>Method overloading enables defining multiple methods with the same name but different parameters.</p>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/b3-polymorphism.png" alt="">
+                    <h2>Favor Composition Over Inheritance</h2>
+                    <p>Use composition to achieve polymorphic behavior, which provides more flexibility and reduces tight coupling.</p>
+                  </div> 
+                  <div class="carousel-item">
+                    <img src="assets/b4-polymorphism.png" alt="">
+                    <h2>Leverage Method Overriding</h2>
+                    <p>Override methods in derived classes to provide specific implementations while maintaining a common interface.</p>
+                  </div>               
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="button-container">
+            <img src="assets/next.png" (click)="showNextSection('s8')" *ngIf="visibleSections === 8" class="next-image" alt="Next">
+          </div>
+    </section>
+
+    <section id="s8" class="lesson-section" *ngIf="visibleSections >= 9">
+        <div class="content-container">
+            <h1>Common Use Cases of Polymorphism</h1>
+            <p>Polymorphism in Java allows a single interface to represent multiple behaviors. It enables code reusability, flexibility, and maintainability. Below are some common use cases where polymorphism is frequently used in Java.</p>
+        </div>
+        <div class="button-container">
+            <img src="assets/next.png" (click)="showNextSection('s9')" *ngIf="visibleSections === 9" class="next-image" alt="Next">
+          </div>
+    </section>
+
+    <section id="s9" class="lesson-section" *ngIf="visibleSections >= 10">
+        <div class="content-container">
+            <img src="assets/c1-poly.png" alt="">
+            <h1>Method Overriding in Inheritance</h1>
+            <p>When a subclass provides a specific implementation of a method that is already defined in its superclass. This allows different subclasses to have their own behavior while sharing the same method signature. It is commonly used in frameworks and APIs where a parent class defines a general method, and child classes customize it.</p>
+        </div>
+        <div class="button-container">
+            <img src="assets/next.png" (click)="showNextSection('s10')" *ngIf="visibleSections === 10" class="next-image" alt="Next">
+          </div>
+    </section>
+
+    <section id="s10" class="lesson-section" *ngIf="visibleSections >= 11">
+        <div class="content-container">
+            <img src="assets/c2-poly.png" alt="">
+            <h1>Method Overloading</h1>
+            <p>When multiple methods in the same class have the same name but different parameters (either in number, type, or both). This allows flexibility in how methods are called, making code more readable and reducing the need for redundant method names.</p>
+        </div>
+        <div class="button-container">
+            <img src="assets/next.png" (click)="showNextSection('s11')" *ngIf="visibleSections === 11" class="next-image" alt="Next">
+          </div>
+    </section>
+
+    <section id="s11" class="lesson-section" *ngIf="visibleSections >= 12">
+        <div class="content-container">
+            <img src="assets/c3-poly.png" alt="">
+            <h1>Interface Implementation</h1>
+            <p>When multiple classes implement the same interface but provide different implementations of its methods. This enables a single interface to define a set of behaviors that can be used interchangeably, supporting loose coupling and code reusability in applications such as dependency injection and event handling.</p>
+        </div>
+        <div class="button-container">
+            <img src="assets/finish.png" class="next-image" (click)="showCompletionPopup()" *ngIf="visibleSections === 12">
+          </div>
+    </section>
 </div>

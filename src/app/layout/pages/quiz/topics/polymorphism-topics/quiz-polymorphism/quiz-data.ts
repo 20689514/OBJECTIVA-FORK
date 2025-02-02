@@ -161,46 +161,6 @@ export const quizData: QuizData[] = [
         correct: "b"
     },
     {
-        question: "Which keyword prevents a method from being overridden?",
-        a: "final",
-        b: "static",
-        c: "protected",
-        d: "private",
-        correct: "a"
-    },
-    {
-        question: "Can static methods be overridden in Java?",
-        a: "Yes",
-        b: "No",
-        c: "Only if marked final",
-        d: "Only if in the same package",
-        correct: "b"
-    },
-    {
-        question: "What happens if the parent and child classes have the same method but different return types?",
-        a: "It causes an error.",
-        b: "It results in overriding.",
-        c: "It’s allowed only if the return types are covariant.",
-        d: "It results in overloading.",
-        correct: "c"
-    },
-    {
-        question: "What is a covariant return type?",
-        a: "A return type that matches the parent class exactly.",
-        b: "A return type that is a subclass of the parent class's return type.",
-        c: "A completely different return type.",
-        d: "None of the above.",
-        correct: "b"
-    },
-    {
-        question: "Which keyword prevents a method from being overridden?",
-        a: "final",
-        b: "static",
-        c: "protected",
-        d: "private",
-        correct: "a"
-    },
-    {
         question: "Why is polymorphism important in real-world applications?",
         a: "It enforces strict coding rules.",
         b: "It allows flexibility and reusable code.",
@@ -368,464 +328,262 @@ export const quizData: QuizData[] = [
         d: "private",
         correct: "a"
     },
-    {
-        question: "What is the output of the following code?",
-        a: "Parent method",
-        b: "Child method",
-        c: "Compilation error",
-        d: "Runtime error",
+    { // code problem 1
+        question: "What is the output of the following code about the zoo management system scenario?",
+        a: "Bark",
+        b: "Some generic animal sound",
+        c: "Meow",
+        d: "Compilation error",
         correct: "b",
-        code: `class Parent {
-    void display() {
-        System.out.println("Parent method");
+        code: `class Animal {
+    public void makeSound() {
+        System.out.println("Some generic animal sound");
     }
 }
 
-class Child extends Parent {
+class Dog extends Animal {
     @Override
-    void display() {
-        System.out.println("Child method");
+    public void makeSound() {
+        System.out.println("Bark");
     }
 }
 
 public class Main {
     public static void main(String[] args) {
-        Parent parent = new Child();
-        parent.display();
+        Animal animal = new Dog(); // Polymorphism: Parent reference, child object
+        animal.makeSound();
     }
 }`
     },
-    {
-        question: "What is the output of the following code?",
-        a: "Parent method\nChild method",
-        b: "Child method\nParent method",
-        c: "Parent method",
-        d: "Child method",
-        correct: "a",
-        code: `class Parent {
-    void display() {
-        System.out.println("Parent method");
+    { // code problem 2
+        question: "What is the output of the following code about the payment system scenario?",
+        a: "Processing generic payment",
+        b: "Error: Method not found",
+        c: "Processing credit card payment",
+        d: "Compilation error",
+        correct: "c",
+        code: `class Payment {
+    public void processPayment() {
+        System.out.println("Processing generic payment");
     }
 }
 
-class Child extends Parent {
-    void display() {
-        super.display();
-        System.out.println("Child method");
+class CreditCard extends Payment {
+    @Override
+    public void processPayment() {
+        System.out.println("Processing credit card payment");
     }
 }
 
 public class Main {
     public static void main(String[] args) {
-        Child child = new Child();
-        child.display();
+        Payment payment = new CreditCard(); // Polymorphism: Parent reference, child object
+        payment.processPayment();
     }
 }`
     },
-    {
-        question: "What is the output of the following code?",
-        a: "Parent constructor\nChild constructor",
-        b: "Child constructor\nParent constructor",
-        c: "Parent constructor",
-        d: "Child constructor",
-        correct: "a",
-        code: `class Parent {
-    Parent() {
-        System.out.println("Parent constructor");
-    }
-}
-
-class Child extends Parent {
-    Child() {
-        System.out.println("Child constructor");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Child child = new Child();
-    }
-}`
-    },
-    {
-        question: "What is the output of the following code?",
-        a: "Parent method",
-        b: "Child method",
-        c: "Compilation error",
-        d: "Runtime error",
+    { // code problem 3
+        question: "What is the output of the following code about the online store scenario?",
+        a: "Applying general discount",
+        b: "Applying seasonal discount",
+        c: "No discount applied",
+        d: "Compilation error",
         correct: "b",
-        code: `class Parent {
-    void display() {
-        System.out.println("Parent method");
+        code: `class Discount {
+    public void applyDiscount() {
+        System.out.println("Applying general discount");
     }
 }
 
-class Child extends Parent {
+class SeasonalDiscount extends Discount {
     @Override
-    void display() {
-        System.out.println("Child method");
+    public void applyDiscount() {
+        System.out.println("Applying seasonal discount");
     }
 }
 
 public class Main {
     public static void main(String[] args) {
-        Parent parent = new Child();
-        parent.display();
+        Discount discount = new SeasonalDiscount(); // Polymorphism: Parent reference, child object
+        discount.applyDiscount();
     }
 }`
     },
-    {
-        question: "What is the output of the following code?",
-        a: "Parent method",
-        b: "Child method",
-        c: "Compilation error",
-        d: "Runtime error",
+    { // code problem 4
+        question: "What is the output of the following code about the transportation system scenario?",
+        a: "Starting vehicle engine",
+        b: "Starting car engine",
+        c: "Engine not started",
+        d: "Compilation error",
         correct: "b",
-        code: `class Parent {
-    void display() {
-        System.out.println("Parent method");
+        code: `class Vehicle {
+    public void startEngine() {
+        System.out.println("Starting vehicle engine");
     }
 }
 
-class Child extends Parent {
+class Car extends Vehicle {
     @Override
-    void display() {
-        System.out.println("Child method");
+    public void startEngine() {
+        System.out.println("Starting car engine");
     }
 }
 
 public class Main {
     public static void main(String[] args) {
-        Parent parent = new Child();
-        parent.display();
+        Vehicle vehicle = new Car(); // Polymorphism: Parent reference, child object
+        vehicle.startEngine();
     }
 }`
     },
-    {
-        question: "What is the output of the following code?",
-        a: "Parent method",
-        b: "Child method",
-        c: "Compilation error",
+    { // code problem 5
+        question: "What is the output of the following code in the company scenario?",
+        a: "Employee is working",
+        b: "Compilation error",
+        c: "Employee is managing the team",
+        d: "Manager is managing the team",
+        correct: "d",
+        code: `class Employee {
+    public void work() {
+        System.out.println("Employee is working");
+    }
+}
+class Manager extends Employee {
+    @Override
+    public void work() {
+        System.out.println("Manager is managing the team");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Employee employee = new Manager(); // Polymorphism: Parent reference, child object
+        employee.work();
+    }
+}`
+    },
+    { // code problem 6
+        question: "What is the output of the following code about the media player scenario?",
+        a: "Playing media",
+        b: "Playing audio file",
+        c: "Playing audio file Playing video file",
+        d: "Playing media Playing media",
+        correct: "c",
+        code: `class Media {
+    public void play() {
+        System.out.println("Playing media");
+    }
+}
+class Audio extends Media {
+    @Override
+    public void play() {
+        System.out.println("Playing audio file");
+    }
+}
+class Video extends Media {
+    @Override
+    public void play() {
+        System.out.println("Playing video file");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Media media1 = new Audio();  // Polymorphism: Parent reference, Audio object
+        Media media2 = new Video();  // Polymorphism: Parent reference, Video object
+        
+        media1.play();
+        media2.play();
+    }
+}`
+    },
+    { // quetion problem 1
+        question: "Which feature of polymorphism allows an interface to be implemented in multiple ways?",
+        a: "Method overloading",
+        b: "Method overriding",
+        c: "Dynamic method dispatch",
+        d: "Both B and C",
+        correct: "d"
+    },
+    { // quetion problem 2
+        question: "Which of the following statements is true about method overloading?",
+        a: "It is possible only if the return type differs.",
+        b: "It depends on different method names.",
+        c: "It only applies to static methods.",
         d: "Runtime error",
-        correct: "b",
-        code: `class Parent {
-    void display() {
-        System.out.println("Parent method");
-    }
-}
-
-class Child extends Parent {
-    @Override
-    void display() {
-        System.out.println("Child method");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Parent parent = new Child();
-        parent.display();
-    }
-}`
+        correct: "c"
     },
-    {
-        question: "What is the output of the following code?",
-        a: "Parent method",
-        b: "Child method",
-        c: "Compilation error",
-        d: "Runtime error",
-        correct: "b",
-        code: `class Parent {
-    void display() {
-        System.out.println("Parent method");
-    }
-}
-
-class Child extends Parent {
-    @Override
-    void display() {
-        System.out.println("Child method");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Parent parent = new Child();
-        parent.display();
-    }
-}`
+    { // quetion problem 3
+        question: "What is the primary advantage of dynamic polymorphism?",
+        a: "It allows code execution to be determined at compile time.",
+        b: "It increases memory consumption.",
+        c: "It enables flexibility by allowing method calls to be resolved at runtime.",
+        d: "It prevents subclasses from modifying parent class behavior.",
+        correct: "c"
     },
-    {
-        question: "What is the output of the following code?",
-        a: "Parent method",
-        b: "Child method",
-        c: "Compilation error",
-        d: "Runtime error",
-        correct: "b",
-        code: `class Parent {
-    void display() {
-        System.out.println("Parent method");
-    }
-}
-
-class Child extends Parent {
-    @Override
-    void display() {
-        System.out.println("Child method");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Parent parent = new Child();
-        parent.display();
-    }
-}`
+    { // quetion problem 4
+        question: "What is the main advantage of polymorphism?",
+        a: "Reduces the need for multiple classes",
+        b: "Improves performance",
+        c: "Allows for code that works with multiple data types in a uniform way",
+        d: "Increases code complexity",
+        correct: "c"
     },
-    {
-        question: "What is the output of the following code?",
-        a: "Parent method",
-        b: "Child method",
-        c: "Compilation error",
-        d: "Runtime error",
-        correct: "b",
-        code: `class Parent {
-    void display() {
-        System.out.println("Parent method");
-    }
-}
-
-class Child extends Parent {
-    @Override
-    void display() {
-        System.out.println("Child method");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Parent parent = new Child();
-        parent.display();
-    }
-}`
+    { // quetion problem 5
+        question: "What happens if two overloaded methods have the same parameters but different return types?",
+        a: "Compilation error",
+        b: "The method with the larger return type is chosen",
+        c: "Runtime error",
+        d: "The method with the smaller return type is chosen",
+        correct: "a"
     },
-    {
-        question: "What is the output of the following code?",
-        a: "Parent method",
-        b: "Child method",
-        c: "Compilation error",
-        d: "Runtime error",
-        correct: "b",
-        code: `class Parent {
-    void display() {
-        System.out.println("Parent method");
-    }
-}
-
-class Child extends Parent {
-    @Override
-    void display() {
-        System.out.println("Child method");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Parent parent = new Child();
-        parent.display();
-    }
-}`
+    { // quetion problem 6
+        question: "Which of the following best describes how polymorphism works in Java?",
+        a: "It allows a subclass to modify private fields of a superclass",
+        b: "It forces all subclasses to have the same",
+        c: "It prevents method overriding",
+        d: "It enables different classes to share a common interface while having unique behaviors ",
+        correct: "d"
     },
-    {
-        question: "What is the output of the following code?",
-        a: "Parent method",
-        b: "Child method",
-        c: "Compilation error",
-        d: "Runtime error",
-        correct: "b",
-        code: `class Parent {
-    void display() {
-        System.out.println("Parent method");
-    }
-}
-
-class Child extends Parent {
-    @Override
-    void display() {
-        System.out.println("Child method");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Parent parent = new Child();
-        parent.display();
-    }
-}`
+    { // quetion problem 7
+        question: "Which of the following statements about method overloading is true?",
+        a: "Method overloading is determined at runtime",
+        b: "Overloaded methods must have different parameter lists ",
+        c: "Overloaded methods must have the same return type",
+        d: "Overloaded methods must belong to different classes",
+        correct: "b"
     },
-    {
-        question: "What is the output of the following code?",
-        a: "Parent method",
-        b: "Child method",
-        c: "Compilation error",
-        d: "Runtime error",
-        correct: "b",
-        code: `class Parent {
-    void display() {
-        System.out.println("Parent method");
-    }
-}
-
-class Child extends Parent {
-    @Override
-    void display() {
-        System.out.println("Child method");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Parent parent = new Child();
-        parent.display();
-    }
-}`
+    { // quetion problem 8
+        question: "Which of the following can be overloaded in Java?",
+        a: "Constructors",
+        b: "Methods",
+        c: "Operators (partially, for built-in classes)",
+        d: "All of the above",
+        correct: "d"
     },
-    {
-        question: "What is the output of the following code?",
-        a: "Parent method",
-        b: "Child method",
-        c: "Compilation error",
-        d: "Runtime error",
-        correct: "b",
-        code: `class Parent {
-    void display() {
-        System.out.println("Parent method");
-    }
-}
-
-class Child extends Parent {
-    @Override
-    void display() {
-        System.out.println("Child method");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Parent parent = new Child();
-        parent.display();
-    }
-}`
+    { // quetion problem 9
+        question: "What is required for method overriding to occur?",
+        a: "The method must have a different return type",
+        b: "The method name must be different",
+        c: "The method in the child class must have the same name and parameter list as the parent class method",
+        d: "The method in the child class must be private",
+        correct: "c"
     },
-    {
-        question: "What is the output of the following code?",
-        a: "Parent method",
-        b: "Child method",
-        c: "Compilation error",
-        d: "Runtime error",
-        correct: "b",
-        code: `class Parent {
-    void display() {
-        System.out.println("Parent method");
-    }
-}
-
-class Child extends Parent {
-    @Override
-    void display() {
-        System.out.println("Child method");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Parent parent = new Child();
-        parent.display();
-    }
-}`
+    { // quetion problem 10
+        question: "How does polymorphism improve reusability?",
+        a: "It prevents code from being used in multiple places",
+        b: "A single method can work for different object types ",
+        c: "It forces developers to write separate code for each type of object",
+        d: "It makes code more difficult to extend",
+        correct: "b"
     },
-    {
-        question: "What is the output of the following code?",
-        a: "Parent method",
-        b: "Child method",
-        c: "Compilation error",
-        d: "Runtime error",
-        correct: "b",
-        code: `class Parent {
-    void display() {
-        System.out.println("Parent method");
-    }
-}
-
-class Child extends Parent {
-    @Override
-    void display() {
-        System.out.println("Child method");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Parent parent = new Child();
-        parent.display();
-    }
-}`
+    { // quetion problem 11
+        question: "How does polymorphism support dynamic behavior?",
+        a: "It ensures that all methods are executed at compile time",
+        b: "It forces all method calls to be statically bound",
+        c: "The method that gets executed is determined at runtime based on the object type",
+        d: "It makes method calls slower",
+        correct: "c"
     },
-    {
-        question: "What is the output of the following code?",
-        a: "Parent method",
-        b: "Child method",
-        c: "Compilation error",
-        d: "Runtime error",
-        correct: "b",
-        code: `class Parent {
-    void display() {
-        System.out.println("Parent method");
-    }
-}
-
-class Child extends Parent {
-    @Override
-    void display() {
-        System.out.println("Child method");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Parent parent = new Child();
-        parent.display();
-    }
-}`
-    },
-    {
-        question: "What is the output of the following code?",
-        a: "Parent method",
-        b: "Child method",
-        c: "Compilation error",
-        d: "Runtime error",
-        correct: "b",
-        code: `class Parent {
-    void display() {
-        System.out.println("Parent method");
-    }
-}
-
-class Child extends Parent {
-    @Override
-    void display() {
-        System.out.println("Child method");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Parent parent = new Child();
-        parent.display();
-    }
-}`
-    },
-    {
+    { // quetion problem 12
         question: "What is the output of the following code?",
         a: "Parent method",
         b: "Child method",

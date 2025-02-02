@@ -1,0 +1,46 @@
+<div class="fill-in-the-blanks">
+    <h2>Fill in the Blanks</h2>
+    <p><strong>Scenario</strong>: Imagine you are building a payment system where different types of payments (Credit Card, PayPal, and Bank Transfer) should have a common method for processing the payment, but each method of payment has a unique way to process it. You’ll use an abstract class for the common method, and subclasses will implement the specific logic for processing the payment.</p>
+    <p>Fill in the blanks to complete the abstract class definition and the concrete classes:</p>
+    <pre>
+<input type="text" [(ngModel)]="definitions[0].userInput" placeholder="{{ definitions[0].label }}" class="inline-input"/> class Payment {{'{'}} <span class="comment">// Use the abstract method</span>
+  void processPayment(double amount);
+
+  void displayTransactionStatus() {{'{'}}
+    System.out.println("Transaction completeed.");
+  {{'}'}}
+{{'}'}}
+
+class CreditCardPayment extends <input type="text" [(ngModel)]="definitions[1].userInput" placeholder="{{ definitions[1].label }}" class="inline-input"/> {{'{'}} <span class="comment">// CreditCardPayment class extends the abstract class</span>
+  void processPayment(<input type="text" [(ngModel)]="definitions[2].userInput" placeholder="{{ definitions[2].label }}" class="inline-input"/> amount) {{'{'}} 
+    System.out.println("Processing a credit card payment of $" + amount);
+  {{'}'}}
+{{'}'}}
+
+class PayPalPayment extends <input type="text" [(ngModel)]="definitions[3].userInput" placeholder="{{ definitions[3].label }}" class="inline-input"/> {{'{'}} <span class="comment">// PayPalPayment class extends the abstract class</span>
+  void processPayment(<input type="text" [(ngModel)]="definitions[4].userInput" placeholder="{{ definitions[4].label }}" class="inline-input"/> amount) {{'{'}}
+    System.out.println("Processing a PayPal payment of $" + amount);
+  {{'}'}}
+{{'}'}}
+
+class BankTransferPayment extends <input type="text" [(ngModel)]="definitions[5].userInput" placeholder="{{ definitions[5].label }}" class="inline-input"/> {{'{'}} <span class="comment">// BankTransferPayment class extends the abstract class</span>
+  void processPayment(<input type="text" [(ngModel)]="definitions[6].userInput" placeholder="{{ definitions[6].label }}" class="inline-input"/> amount) {{'{'}}
+    System.out.println("Processing a bank transfer payment of $" + amount);
+  {{'}'}}
+{{'}'}}
+
+public class Main {{'{'}}
+  public static void main(String[] args) {{'{'}}
+    Payment creditCardPayment = new CreditCardPayment();
+    creditCardPayment.<input type="text" [(ngModel)]="definitions[7].userInput" placeholder="{{ definitions[7].label }}" class="inline-input"/>(100.50);
+    Payment payPalPayment = new PayPalPayment();
+    payPalPayment.<input type="text" [(ngModel)]="definitions[8].userInput" placeholder="{{ definitions[8].label }}" class="inline-input"/>(50.75);
+    Payment bankTransferPayment = new BankTransferPayment();
+    bankTransferPayment.<input type="text" [(ngModel)]="definitions[9].userInput" placeholder="{{ definitions[9].label }}" class="inline-input"/>(200.25);
+  {{'}'}}
+{{'}'}}
+    </pre>
+  
+    <button (click)="validateAnswers()">Submit</button>
+    <button (click)="getHint()">Hint</button>
+  </div>

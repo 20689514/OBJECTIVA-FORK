@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { quizData,QuizData } from './quiz-data';
 import { Router } from '@angular/router';
 import { QuizService } from '../../../../../../services/quiz.service';
-
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-quiz-encapsulation',
@@ -12,8 +12,11 @@ import { QuizService } from '../../../../../../services/quiz.service';
 export class QuizEncapsulationComponent implements OnInit{
   constructor(
       private quizService: QuizService,
-      private router: Router
-    ) {}
+      private router: Router,
+      private title: Title
+    ) {
+        this.title.setTitle('Encapsulation Quiz | Objectiva');
+    }
   
     quizData: QuizData[] = quizData;
   
@@ -68,6 +71,9 @@ export class QuizEncapsulationComponent implements OnInit{
                               .subscribe({
                                   next: (response) => {
                                       console.log('Score saved successfully', response);
+                                      if (currentScore !== null && this.score > currentScore) {
+                                        this.higher = 'Excellent! Your score is greater than your current score which means you have improved!';
+                                      }   
                                   },
                                   error: (error) => {
                                       console.error('Error saving score:', error);
@@ -84,21 +90,94 @@ export class QuizEncapsulationComponent implements OnInit{
           }
       }
   }
-
+    higher: string = '';
     feedback: string = '';
     generateFeedback(): void {
-    let feedback: string;
-    if (this.score <= 5) {
-      feedback = 'You need to improve your understanding of the basics.';
-    } else if (this.score <= 10) {
-      feedback = 'You have a fair understanding, but there is room for improvement.';
-    } else if (this.score <= 15) {
-      feedback = 'Good job! You have a solid understanding of the material.';
-    } else {
-      feedback = 'Excellent! You have a great understanding of the material.';
-    }
-    this.feedback = feedback;
+      let feedback: string;
+  
+      switch (this.score) {
+          case 1:
+              feedback = 'You are just starting with encapsulation. Begin by understanding how it helps in data protection and security.';
+              break;
+          case 2:
+              feedback = 'You have a minimal understanding. Learn about private variables and how they prevent direct access to data.';
+              break;
+          case 3:
+              feedback = 'Keep practicing! Understand how getter and setter methods control data access.';
+              break;
+          case 4:
+              feedback = 'You are making progress! Study why encapsulation is essential for writing secure and maintainable code.';
+              break;
+          case 5:
+              feedback = 'You have a basic grasp of encapsulation. Try implementing a Java class with private fields and public getters/setters.';
+              break;
+          case 6:
+              feedback = 'Good effort! Learn about access modifiers (`public`, `private`, `protected`) and how they enforce encapsulation.';
+              break;
+          case 7:
+              feedback = 'You are getting better! Understand the role of encapsulation in preventing unintended data modification.';
+              break;
+          case 8:
+              feedback = 'Your knowledge is growing! Try using encapsulation to manage sensitive user data in a Java application.';
+              break;
+          case 9:
+              feedback = 'You have a fair grasp of encapsulation. Study the benefits of encapsulation in large-scale applications.';
+              break;
+          case 10:
+              feedback = 'Good job! Learn about immutable objects and how they apply encapsulation to maintain data integrity.';
+              break;
+          case 11:
+              feedback = 'You are developing a solid foundation. Try implementing encapsulation in a banking system example.';
+              break;
+          case 12:
+              feedback = 'Your understanding is strengthening. Study why encapsulation improves modularity and code reusability.';
+              break;
+          case 13:
+              feedback = 'Great work! Understand how encapsulation supports data hiding and reduces complexity.';
+              break;
+          case 14:
+              feedback = 'You have a strong grasp of encapsulation! Try applying encapsulation principles in a Java-based project.';
+              break;
+          case 15:
+              feedback = 'Excellent progress! Learn about the best practices for designing encapsulated classes.';
+              break;
+          case 16:
+              feedback = 'You are getting really good! Study the impact of encapsulation on software security.';
+              break;
+          case 17:
+              feedback = 'Your understanding is solid! Learn how encapsulation enables API design and controlled data exposure.';
+              break;
+          case 18:
+              feedback = 'You have a deep understanding of encapsulation. Try implementing encapsulation in a multi-tier application.';
+              break;
+          case 19:
+              feedback = 'Amazing progress! Study how encapsulation improves debugging and testing.';
+              break;
+          case 20:
+              feedback = 'You are doing great! Focus on using encapsulation to separate concerns in large applications.';
+              break;
+          case 21:
+              feedback = 'Your encapsulation skills are impressive! Learn about encapsulation in Java frameworks like Spring Boot.';
+              break;
+          case 22:
+              feedback = 'Exceptional work! Explore advanced encapsulation techniques, such as encapsulating entire subsystems.';
+              break;
+          case 23:
+              feedback = 'Outstanding! Study real-world use cases where encapsulation prevents security vulnerabilities.';
+              break;
+          case 24:
+              feedback = 'Brilliant understanding! Learn how encapsulation fits into clean coding practices.';
+              break;
+          case 25:
+              feedback = 'Perfect score! You have mastered encapsulation. Apply your expertise to create secure, scalable applications.';
+              break;
+          default:
+              feedback = 'Invalid score. Please check your input.';
+      }
+  
+      this.feedback = feedback;
   }
+  
   
     resetQuiz(): void {
       this.currentQuiz = 0;

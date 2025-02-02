@@ -8,10 +8,10 @@
         <div class="content-container">
             <img src="assets/what-is-inheritance.png" alt="">
             <h1>What is Inheritance?</h1>
-            <p>Inheritance is the process by which one object acquires the properties of another object. It also refers to a feature of object-oriented programming that lets you create classes that are derived from other classes.</p>
+            <p>Inheritance is the process by which one object acquires the properties of another object. In object-oriented programming, it allows you to create new classes based on existing ones, enabling code reuse and hierarchy.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s2')" *ngIf="visibleSections === 2">CLICK ME</button>
+          <img src="assets/next.png" (click)="showNextSection('s2')" *ngIf="visibleSections === 2" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -19,11 +19,11 @@
         <div class="content-container">
             <img src="assets/class-inheritance.png" alt="">
             <p>A class that is based on another class is said to inherit the other class.</p>
-            <p>The class that is inherited is called the <strong>parent class</strong>, the <strong>base class</strong>, or the <strong>super class</strong>.</p>
+            <p>The class being inherited from is known as the <strong>parent class</strong>, the <strong>base class</strong>, or the <strong>super class</strong>.</p>
             <p>The class that does the inheriting is called the <strong>child class</strong>, the <strong>derived class</strong>, or the <strong>subclass</strong>.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s3')" *ngIf="visibleSections === 3">CLICK ME</button>
+          <img src="assets/next.png" (click)="showNextSection('s3')" *ngIf="visibleSections === 3" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -31,11 +31,11 @@
         <div class="content-container">
             <h1>Few important things about Inheritance:</h1>
             <img src="assets/few-inheritance.png" alt="">
-            <p>A <strong>derived class</strong> automatically takes on all the behavior and attributes of its base class. Thus, if you need to create several classes to describe types that aren’t identical but have many features in common, you can create a base class that defines all the common features. Then you can create several derived classes that inherit the common features.  </p>
+            <p>A <strong>derived class</strong> automatically inherits all the properties and behaviors of its base class. This allows you to define a base class with shared features when multiple related classes have common characteristics.  </p>
             <p>A derived class can add features to the base class it inherits defining its own methods and fields. This is one way that a derived class distinguishes itself from its base class.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s4')" *ngIf="visibleSections === 4">CLICK ME</button>
+          <img src="assets/next.png" (click)="showNextSection('s4')" *ngIf="visibleSections === 4" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -47,17 +47,17 @@
                   <div class="carousel-item active">
                     <img src="assets/single-inheritance.png" alt="">
                     <h2>Single Inheritance</h2>
-                    <p>When a class extends another one class only then we call it a single inheritance</p>
+                    <p>Single inheritance occurs when a class extends another one class. This means the subclass inherits properties and behaviors from a single parent class.</p>
                   </div>
                   <div class="carousel-item">
                     <img src="assets/multilevel-inheritance.png" alt="">
                     <h2>Multilevel Inheritance</h2>
-                    <p>A child inherits from a parent, and another child inherits from this child.</p>
+                    <p>Multilevel Inheritance occurs when a child inherits from a parent class, and another child class further inherits from this child.</p>
                   </div>
                   <div class="carousel-item">
                     <img src="assets/hierarchical-inheritance.png" alt="">
                     <h2>Hierarchical Inheritance</h2>
-                    <p>Multiple children inherit from the same parent.</p>
+                    <p>Hierarchical Inheritance occurs when multiple children inherit from the same parent.</p>
                   </div>               
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -71,14 +71,14 @@
             </div>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s5')" *ngIf="visibleSections === 5">CLICK ME</button>
+          <img src="assets/next.png" (click)="showNextSection('s5')" *ngIf="visibleSections === 5" class="next-image" alt="Next">
           </div>
     </section>
 
     <section id="s5" class="lesson-section" *ngIf="visibleSections >= 6">
         <div class="content-container">
             <h1>Single Inheritance</h1>
-            <p>Is one of the easiest to understand. When a class extends another one class only then we call it a single inheritance.</p>
+            <p>Is one of the simplest forms of inheritance. It occurs when a class extends another one class , inheriting its properties and behaviors.</p>
             <p>The below example shows that class B extends only one class which is A. Here A is a parent class of B and B would be a child  class of A.</p>
             <pre class="line-numbers"><code class="language-java">
 class A {{'{'}}  
@@ -88,14 +88,14 @@ class B extends A {{'{}'}}
             </code></pre>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s6')" *ngIf="visibleSections === 6">CLICK ME</button>
+          <img src="assets/next.png" (click)="showNextSection('s6')" *ngIf="visibleSections === 6" class="next-image" alt="Next">
           </div>
     </section>
 
     <section id="s6" class="lesson-section" *ngIf="visibleSections >= 7">
         <div class="content-container">
             <h1>Multilevel Inheritance</h1>
-            <p>Multilevel Inheritance refers to a mechanism in Object Oriented Technology where one can inherit from derived class thereby making this derived class the base class for the new class. </p>
+            <p>Multilevel inheritance is a concept in object-oriented programming where a class inherits from a derived class, effectively making the derived class act as a base class for a new subclass. </p>
             <p>As you can see in below example C is subclass or child class of B and B is a child of A.</p>
             <pre class="line-numbers"><code class="language-java">
 class A {{'{'}}
@@ -107,14 +107,14 @@ class C extends B {{'{'}}
             </code></pre>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s7')" *ngIf="visibleSections === 7">CLICK ME</button>
+          <img src="assets/next.png" (click)="showNextSection('s7')" *ngIf="visibleSections === 7" class="next-image" alt="Next">
           </div>
     </section>
 
     <section id="s7" class="lesson-section" *ngIf="visibleSections >= 8">
         <div class="content-container">
             <h1>Hierarchical Inheritance</h1>
-            <p>In such kind of inheritance one class is inherited by many sub classes. </p>
+            <p>Hierarchical Inheritance occurs when a single parent class is inherited by multiple child classes.</p>
             <p>In the example below, class B, C and D inherit the same class A. A is parent class (or base class) of B, C and D.</p>
             <pre class="line-numbers"><code class="language-java">
 class A {{'{'}}
@@ -128,21 +128,21 @@ class D extends A {{'{'}}
             </code></pre>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s8')" *ngIf="visibleSections === 8">CLICK ME</button>
+          <img src="assets/next.png" (click)="showNextSection('s8')" *ngIf="visibleSections === 8" class="next-image" alt="Next">
           </div>
     </section>
 
     <section id="s8" class="lesson-section" *ngIf="visibleSections >= 9">
         <div class="content-container">
             <h1>Benefits of Inheritance</h1>
-            <p>Without the use of hierarchies, each object would need to define all of its characteristics explicitly.</p>
-            <p>However, by use of inheritance, an object need only define those qualities that make it unique within its class. It can inherit its general attributes from its parent.</p>
+            <p>Without the use of hierarchies, each object would have to define its own characteristics, leading to redundancy.</p>
+            <p>However, by use of inheritance, an object only needs to define its unique qualities, inheriting general attributes from its parent class.</p>
             <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <img src="assets/reusability.png" alt="">
                     <h2>Code Reuse</h2>
-                    <p>Use existing code in new classes.</p>
+                    <p>Reuse existing code in new classes.</p>
                   </div>
                   <div class="carousel-item">
                     <img src="assets/extensibility.png" alt="">
@@ -166,22 +166,19 @@ class D extends A {{'{'}}
             </div>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s9')" *ngIf="visibleSections === 9">CLICK ME</button>
+          <img src="assets/next.png" (click)="showNextSection('s9')" *ngIf="visibleSections === 9" class="next-image" alt="Next">
           </div>
     </section>
 
     <section id="s9" class="lesson-section" *ngIf="visibleSections >= 10">
         <div class="content-container">
             <h1>Real-world examples of inheritance</h1>
-            <p>Inheritance is often explained in terms of real-world objects such as cars and motorcycles or birds and reptiles.</p>
+            <p>Inheritance is commonly illustrated using real-world examples, like cars and motorcycles or birds and reptiles.</p>
             <img src="assets/motor-inheritance.png" alt="">
-            <p>A <strong>Motorcycle</strong> is a type of vehicle that further refines the <strong>Vehicle</strong> class. The Motorcycle class would inherit the Vehicle class, so it would have wheels; a driver; possibly passengers; and the ability to drive, stop, turn, and crash. In addition, it would have features that differentiate it from other types of vehicles, such as two wheels and handlebars used for steering control.</p>
+            <p>A <strong>Motorcycle</strong> is a specialized type of <strong>Vehicle</strong> class. It inherits attributes like wheels, a driver, and the ability to drive, stop, turn, and crash, while also having unique features like two wheels and handlebars for steering control.</p>
         </div>
         <div class="button-container">
-            <button routerLink='/lessons/topics/inheritance' *ngIf="visibleSections === 10">CLICK ME</button>
+            <img src="assets/finish.png" class="next-image" (click)="showCompletionPopup()" *ngIf="visibleSections === 10">
           </div>
     </section>
-
-
-
 </div>

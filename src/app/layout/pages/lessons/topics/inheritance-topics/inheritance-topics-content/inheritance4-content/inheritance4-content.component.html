@@ -12,7 +12,7 @@
             <p>The signature of the overridden method in the subclass must match the one in the superclass, and it allows the subclass to modify the behavior of the method as required.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s2')" *ngIf="visibleSections === 2">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s2')" *ngIf="visibleSections === 2" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -25,7 +25,7 @@
             <li>Method Overriding: A subclass provides a specific implementation for a method that is already defined in its superclass.</li>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s3')" *ngIf="visibleSections === 3">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s3')" *ngIf="visibleSections === 3" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -49,7 +49,7 @@ class Child extends Parent {{'{'}}
             </code></pre>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s4')" *ngIf="visibleSections === 4">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s4')" *ngIf="visibleSections === 4" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -82,7 +82,7 @@ public class Main {{'{'}}
             </code></pre>
         </div>
         <div class="button-container">
-            <button routerLink='/lessons/topics/inheritance' *ngIf="visibleSections === 5">CLICK ME</button>
+            <img src="assets/finish.png" class="next-image" (click)="showCompletionPopup()" *ngIf="visibleSections === 5">
           </div>
     </section>
 </div>

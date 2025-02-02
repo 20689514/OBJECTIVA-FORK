@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class LayoutComponent {
   showNavbar: boolean = true;
+  showFooter: boolean = false;
 
   constructor(private router: Router) {}
 
@@ -18,6 +19,14 @@ export class LayoutComponent {
         this.showNavbar = false;
       } else {
         this.showNavbar = true;
+      }
+    });
+
+    this.router.events.subscribe(() => {
+      if (this.router.url === '/home' || this.router.url === '/lessons/topics' || this.router.url === '/exercises/topics' || this.router.url === '/quiz/topics' || this.router.url === '/about') {
+        this.showFooter = true;
+      } else {
+        this.showFooter = false;
       }
     });
   }

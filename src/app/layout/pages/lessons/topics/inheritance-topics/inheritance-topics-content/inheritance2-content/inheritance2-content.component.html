@@ -8,20 +8,20 @@
         <div class="content-container">
             <img src="assets/single-inheritance.png" alt="">
             <h1>Single Inheritance</h1>
-            <p>Single inheritance is a fundamental concept in object-oriented programming where a class (child or subclass) inherits properties and methods from another class (parent or superclass). This allows the child class to reuse and extend the functionality of the parent class.</p>
+            <p>Single inheritance is a core concept in object-oriented programming where a subclass inherits properties and methods from a superclass, enabling the subclass to reuse and extend the parent's functionality.</p>
             <li>Parent Class (Superclass): The class that provides its properties and behaviors to the child class.</li>
             <li>Child Class (Subclass): The class that inherits and can modify or add new behaviors.</li>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s2')" *ngIf="visibleSections === 2">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s2')" *ngIf="visibleSections === 2" class="next-image" alt="Next">
           </div>
     </section>
 
     <section id="s2" class="lesson-section" *ngIf="visibleSections >= 3">
         <div class="content-container">
             <h1>How does single inheritance works?</h1>
-            <p>In Java, a child class is created using the extends keyword to inherit from a parent class.</p>
-            <p>For example, the following code snippet demonstrates a parent class called Animal and a child class called Dog that inherits from the Animal class.</p>
+            <p>In Java, the <strong>extends</strong> keyword is used to create a child class that inherits from a parent class.</p>
+            <p>For example, The following code snippet illustrates a parent class named Animal and a child class called Dog, which inherits from the Animal class.</p>
             <pre class="line-numbers"><code class="language-java">
 public class Animal {{'{'}}
     public void eat() {{'{'}}
@@ -45,7 +45,7 @@ public class Main {{'{'}}
             </code></pre>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s3')" *ngIf="visibleSections === 3">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s3')" *ngIf="visibleSections === 3" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -53,17 +53,17 @@ public class Main {{'{'}}
         <div class="content-container">
             <img src="assets/parent-child.png" alt="">
             <h1>Parent and Child Classes</h1>
-            <p>The parent class provides base functionality while the child class inherits and can add or override behaviors.</p>
+            <p>The parent class provides base functionality, while the child class inherits it and has the ability to add or override behaviors.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s4')" *ngIf="visibleSections === 4">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s4')" *ngIf="visibleSections === 4" class="next-image" alt="Next">
           </div>
     </section>
 
     <section id="s4" class="lesson-section" *ngIf="visibleSections >= 5">
         <div class="content-container">
             <h1>The super keyword</h1>
-            <p>It is used to refer to the parent class's methods or constructors</p>
+            <p>It is used to refer to the methods or constructors of the parent class.</p>
             <p>For example, the following code snippet demonstrates how to use the super keyword to call the parent class's constructor.</p>
             <pre class="line-numbers"><code class="language-java">
 class Animal {{'{'}}
@@ -90,7 +90,7 @@ public class Main {{'{'}}
             </code></pre>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s5')" *ngIf="visibleSections === 5">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s5')" *ngIf="visibleSections === 5" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -125,7 +125,7 @@ public class Main {{'{'}}
             </code></pre>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s6')" *ngIf="visibleSections === 6">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s6')" *ngIf="visibleSections === 6" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -166,8 +166,7 @@ public class Main {{'{'}}
             </div>
         </div>
         <div class="button-container">
-            <button routerLink='/lessons/topics/inheritance' *ngIf="visibleSections === 7">CLICK ME</button>
+            <img src="assets/finish.png" class="next-image" (click)="showCompletionPopup()" *ngIf="visibleSections === 7">
           </div>
     </section>
-
 </div>

@@ -1,0 +1,31 @@
+<div class="fill-in-the-blanks">
+    <h2>Fill in the Blanks</h2>
+    <p><strong>Scenario</strong>: Imagine you are developing a vehicle simulation game where different vehicles have different speeds. The base class represents a generic vehicle, but specific vehicles like cars have their own speed characteristics.</p>
+    <p>Fill in the blanks to demonstrate method overriding:</p>
+    <pre>
+<input type="text" [(ngModel)]="definitions[0].userInput" placeholder="{{ definitions[0].label }}" class="inline-input"/> Vehicle {{'{'}}
+<input type="text" [(ngModel)]="definitions[1].userInput" placeholder="{{ definitions[1].label }}" class="inline-input"/> speed() {{'{'}}
+    System.out.println("Vehicle speed is 100 km/h");
+  {{'}'}}
+{{'}'}}
+
+class Car <input type="text" [(ngModel)]="definitions[2].userInput" placeholder="{{ definitions[2].label }}" class="inline-input"/> Vehicle {{'{'}}
+<input type="text" [(ngModel)]="definitions[3].userInput" placeholder="{{ definitions[3].label }}" class="inline-input"/> <span class="comment">// Overriding method</span>
+  void speed() {{'{'}}
+    System.out.println("Car speed is 150 km/h");
+  {{'}'}}
+{{'}'}}
+
+public class Main {{'{'}}
+  public static void main(String[] args) {{'{'}}
+    Vehicle vehicle = new Vehicle();
+    <input type="text" [(ngModel)]="definitions[4].userInput" placeholder="{{ definitions[4].label }}" class="inline-input"/>.speed();
+    Car car = new Car();
+    <input type="text" [(ngModel)]="definitions[5].userInput" placeholder="{{ definitions[5].label }}" class="inline-input"/>.speed();
+  {{'}'}}
+{{'}'}}
+    </pre>
+  
+    <button (click)="validateAnswers()">Submit</button>
+    <button (click)="getHint()">Hint</button>
+  </div>

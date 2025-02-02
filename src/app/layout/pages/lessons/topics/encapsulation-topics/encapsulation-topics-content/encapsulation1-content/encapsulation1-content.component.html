@@ -10,7 +10,7 @@
             <p>Encapsulation means putting data and the functions that work on that data together in one unit, called a class. It also controls who can access the data and functions by using clear rules.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s2')" *ngIf="visibleSections === 2">CLICK ME</button>
+          <img src="assets/next.png" (click)="showNextSection('s2')" *ngIf="visibleSections === 2" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -21,7 +21,7 @@
         </div>
         
         <div class="button-container">
-            <button (click)="showNextSection('s3')" *ngIf="visibleSections === 3">CLICK ME</button>
+          <img src="assets/next.png" (click)="showNextSection('s3')" *ngIf="visibleSections === 3" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -35,7 +35,7 @@
             <li>Provide a clear and structured way to interact with data through methods.</li>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s4')" *ngIf="visibleSections === 4">CLICK ME</button>
+          <img src="assets/next.png" (click)="showNextSection('s4')" *ngIf="visibleSections === 4" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -45,7 +45,7 @@
             <img src="assets/atm-machine.png" alt="">
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s5')" *ngIf="visibleSections === 5">CLICK ME</button>
+          <img src="assets/next.png" (click)="showNextSection('s5')" *ngIf="visibleSections === 5" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -87,7 +87,7 @@
               </div>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s6')" *ngIf="visibleSections === 6">CLICK ME</button>
+          <img src="assets/next.png" (click)="showNextSection('s6')" *ngIf="visibleSections === 6" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -97,7 +97,7 @@
             <p>Here are some of the real-world examples of the concept of encapsulation:</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s7')" *ngIf="visibleSections === 7">CLICK ME</button>
+          <img src="assets/next.png" (click)="showNextSection('s7')" *ngIf="visibleSections === 7" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -107,7 +107,7 @@
             <p><strong>Bank Account</strong>: Your balance is private, but you can deposit or withdraw money using specific methods.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s8')" *ngIf="visibleSections === 8">CLICK ME</button>
+          <img src="assets/next.png" (click)="showNextSection('s8')" *ngIf="visibleSections === 8" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -117,7 +117,7 @@
             <p><strong>Mobile Phone</strong>: Internal components like the processor are hidden. You interact through a touchscreen or buttons.</p>
         </div>
         <div class="button-container">
-            <button routerLink='/lessons/topics/encapsulation' *ngIf="visibleSections === 9">BACK TO LESSONS</button>
+            <img src="assets/finish.png" class="next-image" (click)="showCompletionPopup()" *ngIf="visibleSections === 9">
         </div>
     </section>
 

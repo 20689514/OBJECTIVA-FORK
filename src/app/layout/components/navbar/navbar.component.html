@@ -4,11 +4,11 @@
             <li class="logo"><a (click)="homepage()"><img src="assets/logo.png" alt="logo"></a></li>
             <input type="checkbox" id="check">
             <span class="menu">
-                <li><a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
-                <li><a routerLink="/lessons" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Lessons</a></li>
-                <li><a routerLink="/exercises" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Exercises</a></li>
-                <li><a routerLink="/quiz" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Quiz</a></li>
-                <li><a href="about" routerLinkActive="active">About</a></li>
+                <li><a routerLink="/home">Home</a></li>
+                <li><a routerLink="/lessons">Lessons</a></li>
+                <li><a routerLink="/exercises">Exercises</a></li>
+                <li><a routerLink="/quiz">Quiz</a></li>
+                <li><a routerLink="/about">About</a></li>
                 <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
             </span>
             <div class="account-info" (click)="toggleAccount($event)" #accountContainer>

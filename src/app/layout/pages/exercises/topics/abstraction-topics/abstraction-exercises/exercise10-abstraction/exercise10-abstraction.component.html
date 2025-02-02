@@ -1,0 +1,43 @@
+<div class="fill-in-the-blanks">
+    <h2>Fill in the Blanks</h2>
+    <p><strong>Scenario</strong>: Imagine you're developing a system for different types of vehicles. All vehicles should have a method to start the engine, but the specific way in which the engine starts is different for each type of vehicle. You’ll use an abstract class to define the general method signature, and subclasses will provide their specific implementation.</p>
+    <p>Fill in the blanks to complete the abstract class definition and the concrete classes:</p>
+
+    <pre>
+      <input type="text" [(ngModel)]="definitions[0].userInput" placeholder="{{ definitions[0].label }}" class="inline-input"/> class Vehicle {{'{'}} <span class="comment">// Use the abstract method</span>
+  void displayInfo() {{'{'}}
+    System.out.println("This is a vehicle.");
+  {{'}'}}
+
+  <input type="text" [(ngModel)]="definitions[1].userInput" placeholder="{{ definitions[1].label }}" class="inline-input"/> void startEngine(); <span class="comment">// Use the abstract method</span>
+{{'}'}}
+
+class Car extends <input type="text" [(ngModel)]="definitions[2].userInput" placeholder="{{ definitions[2].label }}" class="inline-input"/> {{'{'}} <span class="comment">// Car class extends the first abstract class</span>
+  void startEngine() {{'{'}}
+    System.out.println("Car engine started.");
+  {{'}'}}
+{{'}'}}
+
+class Motorcycle extends <input type="text" [(ngModel)]="definitions[3].userInput" placeholder="{{ definitions[3].label }}" class="inline-input"/> {{'{'}} <span class="comment">// Motorcycle class extends the first abstract class</span>
+  void startEngine() {{'{'}}
+    System.out.println("Motorcycle engine started.");
+  {{'}'}}
+{{'}'}}
+
+public class Main {{'{'}}
+  public static void main(String[] args) {{'{'}}
+    Vehicle car = new Car();
+    <input type="text" [(ngModel)]="definitions[4].userInput" placeholder="{{ definitions[4].label }}" class="inline-input"/>.displayInfo();
+    <input type="text" [(ngModel)]="definitions[5].userInput" placeholder="{{ definitions[5].label }}" class="inline-input"/>.startEngine();
+    Vehicle motorcycle = new Motorcycle();
+    <input type="text" [(ngModel)]="definitions[6].userInput" placeholder="{{ definitions[6].label }}" class="inline-input"/>.displayInfo();
+    <input type="text" [(ngModel)]="definitions[7].userInput" placeholder="{{ definitions[7].label }}" class="inline-input"/>.startEngine();
+  {{'}'}}
+{{'}'}}
+  
+
+    </pre>
+  
+    <button (click)="validateAnswers()">Submit</button>
+    <button (click)="getHint()">Hint</button>
+  </div>

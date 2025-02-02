@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginRegisterComponent } from './login-register/login-register/login-register.component';
-import { QuizIntroductionOopComponent } from './layout/pages/quiz/topics/introduction-topics/quiz-introduction-oop/quiz-introduction-oop.component';
 import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
@@ -9,7 +8,7 @@ const routes: Routes = [
   {path: 'login-register', component: LoginRegisterComponent},
   { path: '', loadChildren: () => import('./layout/layout.module').then(m => m.LayoutModule), canActivate: [AuthGuard] },
   {path: '**',redirectTo: 'login-register'},
-
+  
 ];
 
 @NgModule({

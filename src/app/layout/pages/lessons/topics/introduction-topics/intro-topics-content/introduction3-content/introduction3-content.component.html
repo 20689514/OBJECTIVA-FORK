@@ -11,7 +11,7 @@
             <p>Java is an Object-Oriented Programming language developed by <strong>James Gosling</strong> in the early 1991.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s2')" *ngIf="visibleSections === 2">CLICK ME</button>
+          <img src="assets/next.png" (click)="showNextSection('s2')" *ngIf="visibleSections === 2" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -21,7 +21,7 @@
             <p>The name <strong>Java</strong> originates from an expresso bean, Java. While having a coffee near his office, Gosling came up with this name. Java is a versatile programming language used to build applications for web, mobile, and desktop platforms, known for its "write once, run anywhere" capability.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s3')" *ngIf="visibleSections === 3">FEATURES OF JAVA</button>
+          <img src="assets/next.png" (click)="showNextSection('s3')" *ngIf="visibleSections === 3" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -66,7 +66,7 @@
             </button>
           </div>
           <div class="button-container">
-            <button (click)="showNextSection('s4')" *ngIf="visibleSections === 4">WHERE DOES JAVA IS USED</button>
+            <img src="assets/next.png" (click)="showNextSection('s4')" *ngIf="visibleSections === 4" class="next-image" alt="Next">
           </div>
         </div>
         
@@ -115,7 +115,7 @@
             </div>
         </div>
         <div class="button-container">
-          <button (click)="showNextSection('s5')" *ngIf="visibleSections === 5">FUNDAMENTALS OF JAVA</button>
+          <img src="assets/next.png" (click)="showNextSection('s5')" *ngIf="visibleSections === 5" class="next-image" alt="Next">
         </div>
     </section>
 
@@ -126,7 +126,7 @@
         <p>Here is the fundamentals of <strong>Java</strong>:</p>
       </div>
       <div class="button-container">
-        <button (click)="showNextSection('s6')" *ngIf="visibleSections === 6">MAIN METHOD</button>
+        <img src="assets/next.png" (click)="showNextSection('s6')" *ngIf="visibleSections === 6" class="next-image" alt="Next">
       </div>
     </section>
 
@@ -143,7 +143,7 @@ public class HelloWorld {{'{'}}
         </code></pre>
       </div>
       <div class="button-container">
-        <button (click)="showNextSection('s7')" *ngIf="visibleSections === 7">BASIC SYNTAX</button>
+        <img src="assets/next.png" (click)="showNextSection('s7')" *ngIf="visibleSections === 7" class="next-image" alt="Next">
       </div>
     </section>
 
@@ -154,7 +154,7 @@ public class HelloWorld {{'{'}}
         <p>The rules in writing Java codes. In writing codes in Java, you must follow the correct structure, like using semicolon ( ; ) to end statements and curly braces ( {{'{}'}} ) to group code.</p>
       </div>
       <div class="button-container">
-        <button (click)="showNextSection('s8')" *ngIf="visibleSections === 8">COMMENTS</button>
+        <img src="assets/next.png" (click)="showNextSection('s8')" *ngIf="visibleSections === 8" class="next-image" alt="Next">
       </div>
     </section>
 
@@ -172,7 +172,7 @@ public class Comments {{'{'}}
         </code></pre>
       </div>
       <div class="button-container">
-        <button (click)="showNextSection('s9')" *ngIf="visibleSections === 9">VARIABLES & DATA TYPES</button>
+        <img src="assets/next.png" (click)="showNextSection('s9')" *ngIf="visibleSections === 9" class="next-image" alt="Next">
       </div>
     </section>
 
@@ -213,7 +213,7 @@ public class NonPrimitiveDataTypes {{'{'}}
         </code></pre>
       </div>
       <div class="button-container">
-        <button (click)="showNextSection('s10')" *ngIf="visibleSections === 10">BASIC OPERATORS</button>
+        <img src="assets/next.png" (click)="showNextSection('s10')" *ngIf="visibleSections === 10" class="next-image" alt="Next">
       </div>
     </section>
 
@@ -232,7 +232,7 @@ public class BasicOperators {{'{'}}
         </code></pre>
       </div>
       <div class="button-container">
-        <button (click)="showNextSection('s11')" *ngIf="visibleSections === 11">PACKAGE DECLARATIONS</button>
+        <img src="assets/next.png" (click)="showNextSection('s11')" *ngIf="visibleSections === 11" class="next-image" alt="Next">
       </div>
     </section>
 
@@ -250,7 +250,7 @@ public class HelloWorld {{'{'}}
         </code></pre>
       </div>
       <div class="button-container">
-        <button (click)="showNextSection('s12')" *ngIf="visibleSections === 12">IMPORT STATEMENTS</button>
+        <img src="assets/next.png" (click)="showNextSection('s12')" *ngIf="visibleSections === 12" class="next-image" alt="Next">
       </div>
     </section>
 
@@ -268,7 +268,7 @@ public class HelloWorld {{'{'}}
         </code></pre>
       </div>
       <div class="button-container">
-        <button (click)="showNextSection('s13')" *ngIf="visibleSections === 13">HOW JAVA IMPLEMENTS OOP</button>
+        <img src="assets/next.png" (click)="showNextSection('s13')" *ngIf="visibleSections === 13" class="next-image" alt="Next">
       </div>
     </section>
 
@@ -279,7 +279,7 @@ public class HelloWorld {{'{'}}
         <img src="assets/implements.png" alt="">
       </div>
       <div class="button-container">
-        <button (click)="showNextSection('s14')" *ngIf="visibleSections === 14">HOW JAVA USES OOP</button>
+        <img src="assets/next.png" (click)="showNextSection('s14')" *ngIf="visibleSections === 14" class="next-image" alt="Next">
       </div>
     </section>
 
@@ -320,7 +320,7 @@ public class HelloWorld {{'{'}}
         </div>
       </div>
       <div class="button-container">
-        <button routerLink='/lessons/topics/introduction' *ngIf="visibleSections === 15">BACK TO LESSONS</button>
+        <img src="assets/finish.png" class="next-image" (click)="showCompletionPopup()" *ngIf="visibleSections === 15">
     </div>
     </section>
     

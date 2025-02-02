@@ -11,7 +11,7 @@
             <p>Let's start by understanding why data validation is crucial in encapsulation. </p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s2')" *ngIf="visibleSections === 2">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s2')" *ngIf="visibleSections === 2" class="next-image" alt="Next">
         </div>
     </section>
     
@@ -21,7 +21,7 @@
             <p>Think of data validation as a security guard and quality control inspector combined - it ensures that only valid data enters our encapsulated classes and that the object always remains in a consistent state.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s3')" *ngIf="visibleSections === 3">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s3')" *ngIf="visibleSections === 3" class="next-image" alt="Next">
         </div>
     </section>
 
@@ -32,7 +32,7 @@
             <p>User input validation is like having a security guard at the entrance of a building. Before any data enters our system, we need to verify that it meets our requirements and won't cause problems.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s4')" *ngIf="visibleSections === 4">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s4')" *ngIf="visibleSections === 4" class="next-image" alt="Next">
         </div>
     </section>
 
@@ -73,7 +73,7 @@
               </div>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s5')" *ngIf="visibleSections === 5">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s5')" *ngIf="visibleSections === 5" class="next-image" alt="Next">
         </div>
     </section>
 
@@ -127,7 +127,7 @@ public class Student {{'{'}}
             </code></pre>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s6')" *ngIf="visibleSections === 6">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s6')" *ngIf="visibleSections === 6" class="next-image" alt="Next">
         </div>
     </section>
 
@@ -138,7 +138,7 @@ public class Student {{'{'}}
             <p>Preventing invalid states is about maintaining the integrity of our objects throughout their lifecycle. It's like maintaining a car - we need to ensure all parts work together correctly and stay in a valid state.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s7')" *ngIf="visibleSections === 7">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s7')" *ngIf="visibleSections === 7" class="next-image" alt="Next">
         </div>
     </section>
 
@@ -206,7 +206,7 @@ public class BankAccount {{'{'}}
             </code></pre>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s8')" *ngIf="visibleSections === 8">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s8')" *ngIf="visibleSections === 8" class="next-image" alt="Next">
         </div>
     </section>
 
@@ -265,7 +265,7 @@ public class Product {{'{'}}
             </code></pre>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s9')" *ngIf="visibleSections === 9">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s9')" *ngIf="visibleSections === 9" class="next-image" alt="Next">
         </div>
     </section> 
 
@@ -298,7 +298,7 @@ public class Main {{'{'}}
             </code></pre>
         </div>
         <div class="button-container">
-            <button routerLink='/lessons/topics/encapsulation' *ngIf="visibleSections === 10">CLICK ME</button>
+            <img src="assets/finish.png" class="next-image" (click)="showCompletionPopup()" *ngIf="visibleSections === 10">
         </div>
     </section>
 </div>

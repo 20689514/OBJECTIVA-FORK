@@ -9,98 +9,67 @@ export interface QuizData {
   }
 export const quizData: QuizData[] = [
     {
-        question: "What keyword is used in Java to implement inheritance?",
-        a: "implements",
-        b: "super",
-        c: "extends",
-        d: "inherit",
-        correct: "c",
-        code: "Explanation: In Java, inheritance is implemented using the extends keyword, which allows a child class to inherit properties and methods from a parent class."
+        question: "What is programming?",
+        a: "Designing computer hardware",
+        b: "Writing instructions for a computer to follow",
+        c: "Solving mathematical equations",
+        d: "Drawing flowcharts",
+        correct: "b"
     },
     {
-        question: "In the following code, which class is the parent class?",
-        a: "Dog",
-        b: "Animal",
-        c: "Both Animal and Dog",
-        d: "None",
-        correct: "b",
-        code: `class Animal { 
-    void eat() { 
-        System.out.println("This animal eats food.");
-    }
-}
-
-class Dog extends Animal { 
-    void bark() { 
-        System.out.println("The dog barks.");
-    }
-}`
+        question: "Which of the following is a correct definition of a programming paradigm?",
+        a: "A set of programming languages",
+        b: "A way of organizing and solving problems using programming languages",
+        c: "A type of operating system",
+        d: "A library of functions",
+        correct: "b"
     },
     {
-        question: "How does the super keyword work in inheritance?",
-        a: "It creates a new object of the parent class",
-        b: "It allows the child class to access methods, fields, and constructors from the parent class",
-        c: "It prevents the child class from overriding a method of the parent class",
-        d: "It creates a method in the child class with the same name as the parent class",
-        correct: "b",
+        question: "Which programming paradigm is based on the concept of objects containing data and code?",
+        a: "Procedural Programming",
+        b: "Functional Programming",
+        c: "Object-Oriented Programming",
+        d: "Declarative Programming",
+        correct: "c"
     },
     {
-        question: "What will be the output of the following program?",
-        a: "This animal eats food.\nThe dog eats bones.",
-        b: "The dog eats bones.\nThis animal eats food.",
-        c: "Compilation error",
-        d: "No output",
-        correct: "a",
-        code: `class Animal { 
-    void eat() { 
-        System.out.println("This animal eats food.");
-    }
-}
-
-class Dog extends Animal { 
-    void eat() { 
-        super.eat();
-        System.out.println("The dog eats bones.");
-    }
-}
-
-public class Main { 
-    public static void main(String[] args) { 
-        Dog dog = new Dog();
-        dog.eat();
-    }
-}`
+        question: "Which of the following is a key benefit of using Object-Oriented Programming?",
+        a: "Reduced need for comments in code",
+        b: "Better organization by grouping related data and behaviors",
+        c: "Faster execution of code",
+        d: "Simplified control flow",
+        correct: "b"
     },
     {
-        question: "When should you use inheritance in Java?",
-        a: "When the child class is a specialized version of the parent class",
-        b: "When the child class needs completely different functionality from the parent class",
-        c: "When you want to hide the properties of the parent class",
-        d: "When the child class does not need to reuse any methods from the parent class",
-        correct: "a",
-    },
-    {
-        question: "Which of the following is a common use case for inheritance in Java?",
-        a: "Creating a hierarchy of classes with shared properties and methods",
-        b: "Implementing polymorphism and method overloading",
-        c: "Reusing methods within the same class",
-        d: "Avoiding the use of interfaces",
-        correct: "a",
-    },
-    {
-        question: "Which of the following is a real-world example of inheritance?",
-        a: "A vehicle and a motorcycle",
-        b: "A file and a folder",
-        c: "A string and a number",
-        d: "A pen and a notebook",
+        question: "What is the purpose of creating a class in Object-Oriented Programming?",
+        a: "To define a blueprint for objects",
+        b: "To store variables",
+        c: "To run algorithms",
+        d: "To delete objects",
         correct: "a"
     },
     {
-        question: "What differentiates a car and a motorcycle in terms of inheritance?",
-        a: "A motorcycle is a subclass of a car",
-        b: "Both are subclasses of a Vehicle class",
-        c: "A car inherits a motorcycle class",
-        d: "Inheritance does not apply to cars and motorcycles",
+        question: "Which of the following is an example of object-oriented programming in real life?",
+        a: "A car object that has attributes like color and model and methods like start and accelerate",
+        b: "A loop that calculates a factorial",
+        c: "A variable storing a number",
+        d: "A function that adds two numbers",
+        correct: "a"
+    },
+    {
+        question: "Which of the following programming languages was the first to introduce object-oriented concepts?",
+        a: "Java",
+        b: "Python",
+        c: "Simula",
+        d: "C++",
+        correct: "c"
+    },
+    {
+        question: "Which of the following is NOT a benefit of Object-Oriented Programming?",
+        a: "Improved code organization",
+        b: "Enhanced testing capabilities",
+        c: "Elimination of all bugs in the software",
+        d: "Code reusability",
         correct: "b"
     },
     {
@@ -344,7 +313,7 @@ public class Main {
 }`
     },
     {
-        question: "In the given example code, what does the main method do?",
+        question: "What does the main method do?",
         a: "It defines attributes of objects.",
         b: "It initializes objects and calls their behaviors.",
         c: "It defines constructors.",

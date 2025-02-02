@@ -1,0 +1,26 @@
+<div class="fill-in-the-blanks">
+    <h2>Fill in the Blanks</h2>
+    <p><strong>Scenario</strong>: You are designing a system where items can be played, like games or music. These items must implement a play method, but each will have a different implementation.</p>
+    <p>Fill in the blanks to complete the interfaces implementation:</p>
+    <pre>
+interface Playable {{'{'}}
+<input type="text" [(ngModel)]="definitions[0].userInput" placeholder="{{ definitions[0].label }}" class="inline-input"/> play();
+{{'}'}}
+
+class Game implements <input type="text" [(ngModel)]="definitions[1].userInput" placeholder="{{ definitions[1].label }}" class="inline-input"/> {{'{'}}
+  public void play() {{'{'}}
+    System.out.println("Playing the game...");
+  {{'}'}}
+{{'}'}}
+
+public class Main {{'{'}}
+  public static void main(String[] args) {{'{'}}
+      <input type="text" [(ngModel)]="definitions[2].userInput" placeholder="{{ definitions[2].label }}" class="inline-input"/> game = new <input type="text" [(ngModel)]="definitions[3].userInput" placeholder="{{ definitions[3].label }}" class="inline-input"/>();
+      <input type="text" [(ngModel)]="definitions[4].userInput" placeholder="{{ definitions[4].label }}" class="inline-input"/>.play();
+  {{'}'}}
+{{'}'}}
+    </pre>
+  
+    <button (click)="validateAnswers()">Submit</button>
+    <button (click)="getHint()">Hint</button>
+  </div>

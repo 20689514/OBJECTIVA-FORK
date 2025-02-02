@@ -1,0 +1,43 @@
+<div class="fill-in-the-blanks">
+    <h2>Fill in the Blanks</h2>
+    <p><strong>Scenario</strong>: You are building a Payment System that supports multiple payment methods. A base class Payment has a processPayment() method, which is overridden by CreditCardPayment and PayPalPayment to provide specific implementations. Use method overriding to ensure each payment method processes transactions differently.</p>
+    <p>Fill in the blanks to demonstrate method overriding:</p>
+    <pre>
+<span class="comment">// Parent class</span>
+class Payment {{'{'}}
+    void processPayment(double amount) {{'{'}}
+        System.out.println("Processing a generic payment of $" + amount);
+    {{'}'}}
+{{'}'}}
+
+<span class="comment">// Child class for Credit Card payment</span>
+class CreditCardPayment extends Payment {{'{'}}
+<input type="text" [(ngModel)]="definitions[0].userInput" placeholder="{{ definitions[0].label }}" class="inline-input"/> <span class="comment">// Syntax of overriding</span>
+    void processPayment(double amount) {{'{'}}
+        System.out.println("Processing a credit card payment of $" + amount);
+    {{'}'}}
+{{'}'}}
+
+<span class="comment">// Child class for PayPal payment</span>
+class PayPalPayment extends Payment {{'{'}}
+<input type="text" [(ngModel)]="definitions[1].userInput" placeholder="{{ definitions[1].label }}" class="inline-input"/> <span class="comment">// Syntax of overriding</span>
+    void processPayment(double amount) {{'{'}}
+        System.out.println("Processing a PayPal payment of $" + amount);
+    {{'}'}}
+{{'}'}}
+
+public class PaymentSystem {{'{'}}
+    public static void main(String[] args) {{'{'}}
+        Payment payment1 = new <input type="text" [(ngModel)]="definitions[2].userInput" placeholder="{{ definitions[2].label }}" class="inline-input"/>(); <span class="comment">// First child</span>
+        Payment payment2 = new <input type="text" [(ngModel)]="definitions[3].userInput" placeholder="{{ definitions[3].label }}" class="inline-input"/>(); <span class="comment">// Second child</span>
+        
+        <input type="text" [(ngModel)]="definitions[4].userInput" placeholder="{{ definitions[4].label }}" class="inline-input"/>.processPayment(100.50); <span class="comment">// Calls the overridden method in CreditCardPayment</span>
+        <input type="text" [(ngModel)]="definitions[5].userInput" placeholder="{{ definitions[5].label }}" class="inline-input"/>.processPayment(50.75);  <span class="comment">// Calls the overridden method in PayPalPayment</span>
+    {{'}'}}
+{{'}'}}
+
+    </pre>
+  
+    <button (click)="validateAnswers()">Submit</button>
+    <button (click)="getHint()">Hint</button>
+  </div>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-topics',
@@ -8,7 +9,9 @@ import { Router } from '@angular/router';
 })
 export class TopicsComponent {
 
-constructor(private router: Router) {}
+constructor(private router: Router, private title: Title) {
+    this.title.setTitle('Lessons | Objectiva');
+}
 
 showBackgroundContainer: boolean = false;
 

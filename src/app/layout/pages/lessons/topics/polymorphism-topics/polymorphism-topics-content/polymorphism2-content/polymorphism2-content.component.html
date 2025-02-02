@@ -12,7 +12,7 @@
             <p>It is achieved through <strong>method overloading</strong> or <strong>operator overloading</strong>.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s2')" *ngIf="visibleSections === 2">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s2')" *ngIf="visibleSections === 2" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -24,7 +24,7 @@
             <p>It's like a coffee machine that can make coffee with just a button press, or lets you specify the type of coffee or size depending on your choice.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s3')" *ngIf="visibleSections === 3">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s3')" *ngIf="visibleSections === 3" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -56,7 +56,7 @@ public class Main {{'{'}}
             </code></pre>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s4')" *ngIf="visibleSections === 4">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s4')" *ngIf="visibleSections === 4" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -68,7 +68,7 @@ public class Main {{'{'}}
             <p>It's like a hotel booking system where you can book a room with just a name, or add details like the number of nights, or even include meal preferences.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s5')" *ngIf="visibleSections === 5">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s5')" *ngIf="visibleSections === 5" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -117,7 +117,7 @@ public class Main {{'{'}}
             </code></pre>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s6')" *ngIf="visibleSections === 6">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s6')" *ngIf="visibleSections === 6" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -129,7 +129,7 @@ public class Main {{'{'}}
             <p>It's like the "+" symbol, which can add numbers (2 + 3 = 5) or combine words ("Hello" + "World" = "HelloWorld").</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s7')" *ngIf="visibleSections === 7">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s7')" *ngIf="visibleSections === 7" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -150,7 +150,7 @@ public class Main {{'{'}}
             </code></pre>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s8')" *ngIf="visibleSections === 8">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s8')" *ngIf="visibleSections === 8" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -162,7 +162,7 @@ public class Main {{'{'}}
             <p>It's like a chef who can cook a dish with just the main ingredient, or add more ingredients to make it tastier.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s9')" *ngIf="visibleSections === 9">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s9')" *ngIf="visibleSections === 9" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -189,7 +189,7 @@ public class Main {{'{'}}
             </code></pre>
         </div>
         <div class="button-container">
-            <button routerLink='/lessons/topics/polymorphism' *ngIf="visibleSections === 10">CLICK ME</button>
+            <img src="assets/finish.png" class="next-image" (click)="showCompletionPopup()" *ngIf="visibleSections === 10">
           </div>
     </section>
 

@@ -1,0 +1,58 @@
+<!-- DRAG AND DROP -->
+<div class="container">
+  <h1>Match OOP Concepts with Definitions</h1>
+
+  <!-- Content containing definitions and concepts -->
+  <div class="content">
+    
+    <!-- Definitions with drop zones -->
+    <div class="definitions">
+      <div *ngFor="let definition of definitions" class="definition">
+        <p class="sentence">
+          <span>{{ definition.text }}</span>
+        </p>
+
+        <!-- Dropzone placed below the definition -->
+        <div class="dropzone-container">
+          <span
+            *ngIf="!definition.dropped"
+            class="dropzone d-block text-center text-black-50"
+            (dragover)="onDragOver($event)"
+            (drop)="onDrop(definition)"
+          >
+            Drop here
+          </span>
+          
+          <span *ngIf="definition.dropped" class="dropped">
+            {{ definition.dropped }}
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Draggable concepts -->
+    <div class="concepts">
+      <h2>Data Validations</h2>
+      <ng-container *ngFor="let concept of concepts">
+        <div
+          *ngIf="!concept.dropped" 
+          class="concept"
+          draggable="true"
+          (dragstart)="onDragStart(concept)"
+        >
+          {{ concept.name }}
+        </div>
+      </ng-container>
+    </div>
+    
+  </div>
+
+  <!-- Action buttons -->
+  <div class="actions">
+    <button (click)="validateAnswers()">Submit</button>
+    <button (click)="getHint()">Hint</button>
+    <button (click)="reset()">Reset</button>
+  </div>
+</div>
+
+  

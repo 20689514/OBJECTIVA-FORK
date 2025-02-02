@@ -25,6 +25,7 @@ export class AuthService {
             localStorage.setItem('token', response.token);
             localStorage.setItem('firstName', response.user?.first_name);
             localStorage.setItem('lastName', response.user?.last_name);
+            localStorage.setItem('email', response.user?.email);
           }
           return response;
         }
@@ -69,5 +70,10 @@ export class AuthService {
     }
     return null;
   }
-  
+  getEmail(): string | null {
+    if (isPlatformBrowser(this.platformId)) {
+      return localStorage.getItem('email');
+    }
+    return null;
+  }
 }

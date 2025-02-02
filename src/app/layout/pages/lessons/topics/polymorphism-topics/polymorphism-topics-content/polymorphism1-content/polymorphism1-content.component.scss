@@ -3,13 +3,21 @@
     margin: auto;
     padding: 20px;
     border-radius: 8px;
+    text-align: justify;
     }
   
     .header {
     text-align: center;
     }
   
-  
+    .next-image{
+      cursor: pointer;
+      width: 150px;
+      transition: transform 0.3s;
+    }
+    .next-image:hover{
+      transform: scale(1.1);
+    }
     .interactive-image {
       margin-top: 100px;
       cursor: pointer;
@@ -142,4 +150,13 @@ ol.alternating-colors {
   li:nth-child(odd):before { border-color: #0BAD02; }
   li:nth-child(even):before { border-color: #2378D5; }
 }
+}
+
+pre{
+  border: 1px solid #adadad;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow-x: auto;
 }

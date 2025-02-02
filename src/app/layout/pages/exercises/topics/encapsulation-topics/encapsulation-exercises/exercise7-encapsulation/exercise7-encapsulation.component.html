@@ -1,0 +1,45 @@
+<!-- 4 PICS 1 WORD -->
+<div class="content-container">
+    <div class="game-container">
+      <h2>4 Pics 1 Word</h2>
+      <p>Look at the four pictures carefully and find the one word that connects them all!</p>
+      <!-- Image Display Area -->
+      <div class="image-grid">
+        <img *ngFor="let image of levels[0].images" [src]="image" alt="Game Image">
+      </div>
+    
+      <!-- Letter Selection Area -->
+      <div class="letter-selection">
+        <div class="selected-letters">
+          <span *ngFor="let letter of selectedLetters; let i = index" 
+                (click)="removeSelectedLetter(i)">
+            {{letter}}
+          </span>
+        </div>
+    
+        <div class="available-letters">
+          <button 
+            *ngFor="let letter of shuffledLetters" 
+            (click)="selectLetter(letter)"
+            [disabled]="letter === null">
+            {{letter || ''}}
+          </button>
+        </div>
+      </div>
+    
+      <!-- Check and Hint Buttons -->
+      <div class="game-controls">
+        <button (click)="checkAnswer()">Check</button>
+        <button (click)="getHint()">Hint</button>
+      </div>
+    </div>
+  </div>
+  <!--  -->
+  <!-- <section id="s4" class="lesson-section" *ngIf="visibleSections === 3">
+  <div class="content-container">
+  </div>
+  <div class="button-container">
+      <button (click)="showNextSection('s1')" *ngIf="visibleSections === 3">CLICK ME</button>
+    </div>
+  </section> -->
+  

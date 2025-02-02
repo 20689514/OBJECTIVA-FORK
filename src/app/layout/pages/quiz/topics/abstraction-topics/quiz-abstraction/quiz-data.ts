@@ -351,14 +351,7 @@ class Bike extends FuelVehicle {}`,
     d: 'FuelVehicle and Car',
     correct: 'b',
   },
-  {
-    question: 'Which class needs to implement the fuelType() method?',
-    a: 'FuelVehicle',
-    b: 'Vehicle',
-    c: 'Car',
-    d: 'Both Car and Bike',
-    correct: 'd',
-  },
+
   {
     question: 'Which method does the Game class implement from the Playable interface?',
     code: `

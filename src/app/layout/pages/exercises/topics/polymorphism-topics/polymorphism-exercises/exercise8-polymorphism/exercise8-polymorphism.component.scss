@@ -1,0 +1,47 @@
+@keyframes slideUp {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+.fill-in-the-blanks {
+    animation: slideUp 0.5s ease-out;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  
+    pre {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      position: relative;
+    }
+  
+    .inline-input {
+      display: inline-block;
+      margin: 0 5px;
+      padding: 2px;
+      width: 100px;
+      font-family: inherit;
+      border: 1px solid #ccc;
+    }
+  
+    button {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+      margin-right: 15px;
+      &:hover {
+        background-color: #45a049;
+      }
+    }
+}

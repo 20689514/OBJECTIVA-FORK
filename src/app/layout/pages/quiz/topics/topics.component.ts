@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QuizService } from '../../../../services/quiz.service';
 import { Router } from '@angular/router';
-
+import { Title } from '@angular/platform-browser';
 interface QuizItem {
   id: string;
   title: string;
@@ -63,7 +63,9 @@ quizzes: QuizItem[] = [
     // Add other quizzes here
   ];
 
-  constructor(private quizService: QuizService, private router: Router) {}
+  constructor(private quizService: QuizService, private router: Router, private title: Title) {
+    this.title.setTitle('Quiz | Objectiva');
+  }
 
   ngOnInit() {
     this.loadScores();

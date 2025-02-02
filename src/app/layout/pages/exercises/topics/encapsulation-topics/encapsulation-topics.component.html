@@ -1,0 +1,20 @@
+<div class="header">
+    <i class="fa fa-times close-icon" (click)="closeLesson()"></i>
+    <div class="progress-container">
+      <div class="progress-bar">
+        <div class="progress" [style.width]="progress + '%'"></div>
+      </div>
+    </div>
+  </div>
+  
+<!-- Exercise Components -->
+<app-exercise1-encapsulation *ngIf="currentExercise === 0" (nextExercise)="onNextExercise()"></app-exercise1-encapsulation>
+<app-exercise2-encapsulation *ngIf="currentExercise === 1" (nextExercise)="onNextExercise()"></app-exercise2-encapsulation>
+<app-exercise3-encapsulation *ngIf="currentExercise === 2" (nextExercise)="onNextExercise()"></app-exercise3-encapsulation>
+<app-exercise4-encapsulation *ngIf="currentExercise === 3" (nextExercise)="onNextExercise()"></app-exercise4-encapsulation>
+<app-exercise5-encapsulation *ngIf="currentExercise === 4" (nextExercise)="onNextExercise()"></app-exercise5-encapsulation>
+<app-exercise6-encapsulation *ngIf="currentExercise === 5" (nextExercise)="onNextExercise()"></app-exercise6-encapsulation>
+<app-exercise7-encapsulation *ngIf="currentExercise === 6" (nextExercise)="onNextExercise()"></app-exercise7-encapsulation>
+<app-exercise8-encapsulation *ngIf="currentExercise === 7" (nextExercise)="onNextExercise()"></app-exercise8-encapsulation>
+<app-exercise9-encapsulation *ngIf="currentExercise === 8" (nextExercise)="onNextExercise()"></app-exercise9-encapsulation>
+<app-exercise10-encapsulation *ngIf="currentExercise === 9" (nextExercise)="onNextExercise()"></app-exercise10-encapsulation>

@@ -156,3 +156,15 @@
     color: #000000;
     font-size: 1rem;
 }
+
+// Responsive styles
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column; // Stack vertically on mobile devices
+  }
+
+  .image-col,
+  .form-col {
+    width: 100%; // Ensure full width for both columns
+  }
+}

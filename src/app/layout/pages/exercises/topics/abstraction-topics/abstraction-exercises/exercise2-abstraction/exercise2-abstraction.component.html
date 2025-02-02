@@ -1,0 +1,26 @@
+<div class="fill-in-the-blanks">
+    <h2>Fill in the Blanks</h2>
+    <p><strong>Scenario</strong>: You are building a system for a smartphone where it can both take photos and navigate. The smartphone should implement two interfaces: Camera and GPS. Complete the class by filling in the appropriate blanks.</p>
+    <p>Fill in the blanks to demonstrate multiple interface implementation:</p>
+    <pre>
+interface Camera {{'{'}}
+  void takePhoto();
+{{'}'}}
+
+interface GPS {{'{'}}
+  void navigate();
+{{'}'}}
+
+class Smartphone <input type="text" [(ngModel)]="definitions[0].userInput" placeholder="{{ definitions[0].label }}" class="inline-input"/> Camera, GPS {{'{'}}
+  public void <input type="text" [(ngModel)]="definitions[1].userInput" placeholder="{{ definitions[1].label }}" class="inline-input"/>() {{'{'}}
+    System.out.println("Taking a photo...");
+  {{'}'}}
+  public void <input type="text" [(ngModel)]="definitions[2].userInput" placeholder="{{ definitions[2].label }}" class="inline-input"/> {{'{'}}
+    System.out.println("Navigating...");
+  {{'}'}}
+{{'}'}}
+    </pre>
+  
+    <button (click)="validateAnswers()">Submit</button>
+    <button (click)="getHint()">Hint</button>
+  </div>

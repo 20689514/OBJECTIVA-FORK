@@ -11,7 +11,7 @@
             <p>A <strong>class</strong> in Java serves as a blueprint for creating objects, encapsulating data (fields) and behaviors (methods). Classes are the foundation of object-oriented programming in Java.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s2')" *ngIf="visibleSections === 2">FIELDS</button>
+            <img src="assets/next.png" (click)="showNextSection('s2')" *ngIf="visibleSections === 2" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -27,7 +27,7 @@ public class Car {{'{'}}
               </code></pre>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s3')" *ngIf="visibleSections === 3">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s3')" *ngIf="visibleSections === 3" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -44,7 +44,7 @@ public Car(String color, int speed) {{'{'}}
               </code></pre>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s4')" *ngIf="visibleSections === 4">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s4')" *ngIf="visibleSections === 4" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -61,7 +61,7 @@ public class Car {{'{'}}
               </code></pre>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s5')" *ngIf="visibleSections === 5">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s5')" *ngIf="visibleSections === 5" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -89,7 +89,7 @@ public class Car {{'{'}}
               </code></pre>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s6')" *ngIf="visibleSections === 6">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s6')" *ngIf="visibleSections === 6" class="next-image" alt="Next">
           </div>
     </section>
 <!-- start -->
@@ -102,7 +102,7 @@ public class Car {{'{'}}
             <p>Java classes can have <strong>instance</strong> members and <strong>static</strong> members, each serving distinct purposes.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s7')" *ngIf="visibleSections === 7">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s7')" *ngIf="visibleSections === 7" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -149,7 +149,7 @@ public class Main {{'{'}}
              <p>The Blue car is driving at 80 mph</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s8')" *ngIf="visibleSections === 8">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s8')" *ngIf="visibleSections === 8" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -192,7 +192,7 @@ public class Main {{'{'}}
              <p>Total numbers of cars: 2</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s9')" *ngIf="visibleSections === 9">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s9')" *ngIf="visibleSections === 9" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -203,7 +203,7 @@ public class Main {{'{'}}
             <p>Method parameters are the values you give to a method when you call it. They act like “inputs” for the method, and the method uses these inputs to do something or calculate something. You define parameters in the method, and when you call the method, you give it the actual values called arguments. You can add as many parameters as you want, as long it has a comma to separate them.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s10')" *ngIf="visibleSections === 10">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s10')" *ngIf="visibleSections === 10" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -234,7 +234,7 @@ public class PizzaShop {{'{'}}
              <p>You ordered a Medium pizza with Mushroom topping.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s11')" *ngIf="visibleSections === 11">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s11')" *ngIf="visibleSections === 11" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -245,7 +245,7 @@ public class PizzaShop {{'{'}}
             <p>Return types tell you what kind of value a method will give back after it finishes. If a method does not need to return anything, we use “void”. If the method needs to give back a value like a number or text, we specify the type of that value like “int” for integers or “double for decimal numbers.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s12')" *ngIf="visibleSections === 12">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s12')" *ngIf="visibleSections === 12" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -274,7 +274,7 @@ public class TextMessage {{'{'}}
              <p>Message sent: Hey! I'll meet you at 5 PM.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s13')" *ngIf="visibleSections === 13">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s13')" *ngIf="visibleSections === 13" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -305,7 +305,7 @@ public class WeatherApp {{'{'}}
              <p>The current temperature is 75°F.</p>
         </div>
         <div class="button-container">
-            <button routerLink='/lessons/topics/introduction' *ngIf="visibleSections === 14">BACK TO LESSONS</button>
+            <img src="assets/finish.png" class="next-image" (click)="showCompletionPopup()" *ngIf="visibleSections === 14">
         </div>
     </section>
 </div>

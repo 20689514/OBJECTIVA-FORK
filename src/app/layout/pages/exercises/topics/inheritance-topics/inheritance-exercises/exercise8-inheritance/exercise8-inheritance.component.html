@@ -1,0 +1,39 @@
+<div class="fill-in-the-blanks">
+    <h2>Fill in the Blanks</h2>
+    <p><strong>Scenario</strong>: In a zoo, multiple animals share common behaviors (such as eating), but each animal also has its unique sound. You want to create a system where both Dog and Cat inherit from the common Animal class.</p>
+    <p>Fill in the blanks to demonstrate hierarchical inheritance:</p>
+    <pre>
+class Animal {{'{'}}  
+  void eat() {{'{'}}
+    System.out.println("This animal is eating...");
+  {{'}'}}
+{{'}'}}
+
+class Dog <input type="text" [(ngModel)]="definitions[0].userInput" placeholder="{{ definitions[0].label }}" class="inline-input"/> Animal {{'{'}}
+  void bark() {{'{'}}
+    System.out.println("This dog is barking...");
+  {{'}'}}
+{{'}'}}
+
+class Cat <input type="text" [(ngModel)]="definitions[1].userInput" placeholder="{{ definitions[1].label }}" class="inline-input"/> Animal {{'{'}}
+  void meow() {{'{'}}
+    System.out.println("This cat is meowing...");
+  {{'}'}}
+{{'}'}}
+
+public class Main {{'{'}}
+  public static void main(String[] args) {{'{'}}
+    <input type="text" [(ngModel)]="definitions[2].userInput" placeholder="{{ definitions[2].label }}" class="inline-input"/> dog = new <input type="text" [(ngModel)]="definitions[3].userInput" placeholder="{{ definitions[3].label }}" class="inline-input"/>();
+    dog.<input type="text" [(ngModel)]="definitions[4].userInput" placeholder="{{ definitions[4].label }}" class="inline-input"/>(); <span class="comment">// Call the inherited eat method from Animal</span>
+    dog.<input type="text" [(ngModel)]="definitions[5].userInput" placeholder="{{ definitions[5].label }}" class="inline-input"/>(); <span class="comment">// Call the bark method from Dog</span>
+
+    <input type="text" [(ngModel)]="definitions[6].userInput" placeholder="{{ definitions[6].label }}" class="inline-input"/> cat = new <input type="text" [(ngModel)]="definitions[7].userInput" placeholder="{{ definitions[7].label }}" class="inline-input"/>();
+    cat.<input type="text" [(ngModel)]="definitions[8].userInput" placeholder="{{ definitions[8].label }}" class="inline-input"/>(); <span class="comment">// Call the inherited eat method from Animal</span>
+    cat.<input type="text" [(ngModel)]="definitions[9].userInput" placeholder="{{ definitions[9].label }}" class="inline-input"/>(); <span class="comment">// Call the meow method from Cat</span>
+  {{'}'}}
+{{'}'}}
+    </pre>
+  
+    <button (click)="validateAnswers()">Submit</button>
+    <button (click)="getHint()">Hint</button>
+  </div>

@@ -1,0 +1,21 @@
+<div class="header">
+    <i class="fa fa-times close-icon" (click)="closeLesson()"></i>
+    <div class="progress-container">
+      <div class="progress-bar">
+        <div class="progress" [style.width]="progress + '%'"></div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Exercise Components -->
+    <app-exercise1-polymorphism *ngIf="currentExercise === 0" (nextExercise)="onNextExercise()"></app-exercise1-polymorphism>
+    <app-exercise2-polymorphism *ngIf="currentExercise === 1" (nextExercise)="onNextExercise()"></app-exercise2-polymorphism>
+    <app-exercise3-polymorphism *ngIf="currentExercise === 2" (nextExercise)="onNextExercise()"></app-exercise3-polymorphism>
+    <app-exercise4-polymorphism *ngIf="currentExercise === 3" (nextExercise)="onNextExercise()"></app-exercise4-polymorphism>
+    <app-exercise5-polymorphism *ngIf="currentExercise === 4" (nextExercise)="onNextExercise()"></app-exercise5-polymorphism>
+    <app-exercise6-polymorphism *ngIf="currentExercise === 5" (nextExercise)="onNextExercise()"></app-exercise6-polymorphism>
+    <app-exercise7-polymorphism *ngIf="currentExercise === 6" (nextExercise)="onNextExercise()"></app-exercise7-polymorphism>
+    <app-exercise8-polymorphism *ngIf="currentExercise === 7" (nextExercise)="onNextExercise()"></app-exercise8-polymorphism>
+    <app-exercise9-polymorphism *ngIf="currentExercise === 8" (nextExercise)="onNextExercise()"></app-exercise9-polymorphism>
+    <app-exercise10-polymorphism *ngIf="currentExercise === 9" (nextExercise)="onNextExercise()"></app-exercise10-polymorphism>
+    

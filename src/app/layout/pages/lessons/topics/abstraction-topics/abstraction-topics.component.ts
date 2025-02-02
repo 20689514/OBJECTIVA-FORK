@@ -1,6 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LessonProgressService } from '../../../../../services/lesson-progress.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-abstraction-topics',
@@ -9,7 +10,9 @@ import { LessonProgressService } from '../../../../../services/lesson-progress.s
 })
 export class AbstractionTopicsComponent implements OnInit {
 
- constructor(private router: Router, private progressService: LessonProgressService) {} 
+ constructor(private router: Router, private progressService: LessonProgressService, private title: Title) {
+    this.title.setTitle('Learn Abstraction | Objectiva');
+ } 
   lessonProgress: { [key: string]: boolean } = {}; // copy
 
   showBackgroundContainer: boolean = false;

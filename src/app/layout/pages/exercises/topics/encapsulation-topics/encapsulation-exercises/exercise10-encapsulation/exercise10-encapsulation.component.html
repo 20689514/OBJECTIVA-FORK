@@ -1,0 +1,56 @@
+<div class="fill-in-the-blanks">
+    <h2>Fill in the Blanks</h2>
+    <p><strong>Scenario</strong>: You are building an employee management system. The Employee class must ensure that the salary cannot exceed a defined maximum limit and that the id remains private.</p>
+    <p>Fill in the blanks to demonstrate encapsulation with validation:</p>
+    <pre>
+class Employee {{'{'}}
+    <span class="comment">// Private fields for encapsulation</span>
+    <input type="text" [(ngModel)]="definitions[0].userInput" placeholder="{{ definitions[0].label }}" class="inline-input"/> int id;
+    <input type="text" [(ngModel)]="definitions[1].userInput" placeholder="{{ definitions[1].label }}" class="inline-input"/> double salary;
+
+    <span class="comment">// Constant for maximum salary</span>
+    private static <input type="text" [(ngModel)]="definitions[2].userInput" placeholder="{{ definitions[2].label }}" class="inline-input"/> double MAX_SALARY = 100000;
+
+    <span class="comment">// Public getter for 'id'</span>
+    public int getId() {{'{'}}
+        return id;
+    {{'}'}}
+
+    <span class="comment">// Public setter for 'id'</span>
+    public void setId(<input type="text" [(ngModel)]="definitions[3].userInput" placeholder="{{ definitions[3].label }}" class="inline-input"/> id) {{'{'}}
+        this.id = id;
+    {{'}'}}
+
+    <span class="comment">// Public getter for 'salary'</span>
+    public <input type="text" [(ngModel)]="definitions[4].userInput" placeholder="{{ definitions[4].label }}" class="inline-input"/> getSalary() {{'{'}}
+        return salary;
+    {{'}'}}
+
+    <span class="comment">// Public setter for 'salary' with validation</span>
+    public void setSalary(double salary) {{'{'}}
+        if (salary <= MAX_SALARY) {{'{'}}
+            this.salary = salary;
+        {{'}'}} 
+        else {{'{'}}
+            System.out.println("Salary exceeds the maximum limit!");
+        {{'}'}}
+    {{'}'}}
+{{'}'}}
+
+public class Main {{'{'}}
+    public static void main(String[] args) {{'{'}}
+    <input type="text" [(ngModel)]="definitions[5].userInput" placeholder="{{ definitions[5].label }}" class="inline-input"/> emp = new Employee();
+    <input type="text" [(ngModel)]="definitions[6].userInput" placeholder="{{ definitions[6].label }}" class="inline-input"/>.setId(101);
+    <input type="text" [(ngModel)]="definitions[7].userInput" placeholder="{{ definitions[7].label }}" class="inline-input"/>.setSalary(90000); <span class="comment">// Setting valid salary</span>
+        System.out.println("Employee ID: " + emp.getId());
+        System.out.println("Employee Salary: " + emp.getSalary());
+
+        emp.<input type="text" [(ngModel)]="definitions[8].userInput" placeholder="{{ definitions[8].label }}" class="inline-input"/>(150000); <span class="comment">// Attempting to set invalid salary</span>
+    {{'}'}}
+{{'}'}}
+
+    </pre>
+  
+    <button (click)="validateAnswers()">Submit</button>
+    <button (click)="getHint()">Hint</button>
+  </div>

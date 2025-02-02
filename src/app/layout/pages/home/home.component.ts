@@ -10,7 +10,7 @@ import { Router, RouterModule } from '@angular/router';
 })
 export class HomeComponent {
   constructor(private titleService: Title, private router: Router) {
-    this.titleService.setTitle('Objectiva - Learn OOP for Free');
+    this.titleService.setTitle('Objectiva | Learn OOP for Free');
   }
   selectedDifficulty: string | null = null;
 

@@ -10,7 +10,7 @@
             <h1>Identifying objects from requirements</h1>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s2')" *ngIf="visibleSections === 2">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s2')" *ngIf="visibleSections === 2" class="next-image" alt="Next">
         </div>
     </section>
 
@@ -21,7 +21,7 @@
             <p>When you are designing a system or application, the first step is to identify the things or objects that your program will need to handle.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s3')" *ngIf="visibleSections === 3">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s3')" *ngIf="visibleSections === 3" class="next-image" alt="Next">
         </div>
     </section>
 
@@ -32,7 +32,7 @@
             <p>Look at the requirements or the problem you are trying to solve, and ask yourself: “What are the main things involved?”</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s4')" *ngIf="visibleSections === 4">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s4')" *ngIf="visibleSections === 4" class="next-image" alt="Next">
         </div>
     </section>
 
@@ -42,7 +42,7 @@
             <img src="assets/library-system.png" alt="">
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s5')" *ngIf="visibleSections === 5">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s5')" *ngIf="visibleSections === 5" class="next-image" alt="Next">
         </div>
     </section>
 
@@ -53,7 +53,7 @@
             <img src="assets/school-system.png" alt="">
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s6')" *ngIf="visibleSections === 6">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s6')" *ngIf="visibleSections === 6" class="next-image" alt="Next">
         </div>
     </section>
 
@@ -63,7 +63,7 @@
             <h1>Determining object attributes</h1>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s7')" *ngIf="visibleSections === 7">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s7')" *ngIf="visibleSections === 7" class="next-image" alt="Next">
         </div>
     </section>
 
@@ -75,7 +75,7 @@
             
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s8')" *ngIf="visibleSections === 8">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s8')" *ngIf="visibleSections === 8" class="next-image" alt="Next">
         </div>
     </section>
 
@@ -86,7 +86,7 @@
             <p>For each object you identify, ask yourself, “What information do I need to store about this object?"</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s9')" *ngIf="visibleSections === 9">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s9')" *ngIf="visibleSections === 9" class="next-image" alt="Next">
         </div>
     </section>
 
@@ -101,7 +101,7 @@
             <li>grades</li>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s10')" *ngIf="visibleSections === 10">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s10')" *ngIf="visibleSections === 10" class="next-image" alt="Next">
         </div>
     </section>
 
@@ -111,7 +111,7 @@
             <h1>Understanding object relationships</h1>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s11')" *ngIf="visibleSections === 11">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s11')" *ngIf="visibleSections === 11" class="next-image" alt="Next">
         </div>
     </section>
 
@@ -122,7 +122,7 @@
             <p>Objects often need to interact with one another. These relationships show how objects are connected or how they work together.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s12')" *ngIf="visibleSections === 12">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s12')" *ngIf="visibleSections === 12" class="next-image" alt="Next">
         </div>
     </section>
 
@@ -171,7 +171,7 @@
               </div>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s13')" *ngIf="visibleSections === 13">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s13')" *ngIf="visibleSections === 13" class="next-image" alt="Next">
         </div>
     </section>
 
@@ -181,7 +181,7 @@
             <h1>How to implement it in Java?</h1>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s14')" *ngIf="visibleSections === 14">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s14')" *ngIf="visibleSections === 14" class="next-image" alt="Next">
         </div>
     </section>
 
@@ -252,7 +252,7 @@ public class SchoolSystem {{'{'}}
             <p>Ms. Smith is teaching Math.</p>
         </div>
         <div class="button-container">
-            <button routerLink='/lessons/topics/introduction' *ngIf="visibleSections === 15">BACK TO LESSONS</button>
+            <img src="assets/finish.png" class="next-image" (click)="showCompletionPopup()" *ngIf="visibleSections === 15">
         </div>
     </section>
 

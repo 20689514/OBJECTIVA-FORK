@@ -1,0 +1,38 @@
+<div class="account-settings">
+    <h2>Account Settings</h2>
+    <form [formGroup]="accountForm" (ngSubmit)="updateProfile()">
+      
+      <div>
+        <label for="first_name">First Name</label>
+        <input id="first_name" formControlName="first_name" type="text" [readonly]="!isEditing">
+      </div>
+      
+      <div>
+        <label for="last_name">Last Name</label>
+        <input id="last_name" formControlName="last_name" type="text" [readonly]="!isEditing">
+      </div>
+  
+      <div>
+        <label for="email">Email</label>
+        <input id="email" formControlName="email" type="email" readonly>
+      </div>
+  
+      <div *ngIf="isEditing">
+        <label for="password">New Password</label>
+        <input id="password" formControlName="password" type="password">
+      </div>
+  
+      <div *ngIf="isEditing">
+        <label for="confirm_password">Confirm Password</label>
+        <input id="confirm_password" formControlName="confirm_password" type="password">
+        <small *ngIf="accountForm.errors?.['mismatch']" class="error-text">Passwords do not match</small>
+      </div>
+  
+      <div class="buttons">
+        <button type="button" (click)="enableEditing()" *ngIf="!isEditing">Edit</button>
+        <button type="submit" [disabled]="accountForm.invalid" *ngIf="isEditing">Save</button>
+        <button type="button" (click)="cancelEditing()" *ngIf="isEditing">Cancel</button>
+      </div>
+  
+    </form>
+  </div>

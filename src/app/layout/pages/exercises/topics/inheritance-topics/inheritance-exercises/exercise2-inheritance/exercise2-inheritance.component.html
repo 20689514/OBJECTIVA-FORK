@@ -1,0 +1,29 @@
+<div class="fill-in-the-blanks">
+  <h2>Fill in the Blanks</h2>
+  <p><strong>Scenario</strong>: In a zoo, you have an Animal class that contains a method eat() for all animals. The Dog class inherits from Animal and adds its own behavior with the bark() method.</p>
+  <p>Fill in the blanks to create a single inheritance structure:</p>
+  <pre>
+class Animal {{'{'}}  
+  void eat() {{'{'}}
+    System.out.println("This animal is eating...");
+  {{'}'}}  
+{{'}'}}  
+
+class Dog <input type="text" [(ngModel)]="definitions[0].userInput" placeholder="{{ definitions[0].label }}" class="inline-input"/> Animal {{'{'}}
+  void bark() {{'{'}}
+    System.out.println("This dog is barking...");
+  {{'}'}}
+{{'}'}}
+
+public class Main {{'{'}}
+  public static void main(String[] args) {{'{'}}
+  <input type="text" [(ngModel)]="definitions[1].userInput" placeholder="{{ definitions[1].label }}" class="inline-input"/> dog = new <input type="text" [(ngModel)]="definitions[2].userInput" placeholder="{{ definitions[2].label }}" class="inline-input"/>();
+    dog.<input type="text" [(ngModel)]="definitions[3].userInput" placeholder="{{ definitions[3].label }}" class="inline-input"/>(); <span class="comment">// Call the inherited eat method</span>
+    dog.<input type="text" [(ngModel)]="definitions[4].userInput" placeholder="{{ definitions[4].label }}" class="inline-input"/>(); <span class="comment">// Call the bark method</span>
+  {{'}'}}
+{{'}'}}
+  </pre>
+
+  <button (click)="validateAnswers()">Submit</button>
+  <button (click)="getHint()">Hint</button>
+</div>

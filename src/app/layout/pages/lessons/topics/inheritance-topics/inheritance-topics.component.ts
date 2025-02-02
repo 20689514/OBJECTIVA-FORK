@@ -1,7 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LessonProgressService } from '../../../../../services/lesson-progress.service';
-
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-inheritance-topics',
@@ -9,7 +9,9 @@ import { LessonProgressService } from '../../../../../services/lesson-progress.s
   styleUrl: './inheritance-topics.component.scss'
 })
 export class InheritanceTopicsComponent implements OnInit {
-  constructor(private router: Router, private progressService: LessonProgressService) {} 
+  constructor(private router: Router, private progressService: LessonProgressService, private title: Title) {
+    this.title.setTitle('Learn Inheritance | Objectiva');
+  } 
   lessonProgress: { [key: string]: boolean } = {}; // copy
 
   showBackgroundContainer: boolean = false;

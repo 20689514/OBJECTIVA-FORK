@@ -14,7 +14,7 @@
         <p>There is a classification, style or way of programming that is called <strong>programming paradigms</strong>. It is an approach to solve problems by using programming languages.</p>
   
         <div class="button-container">
-          <button (click)="showNextSection('s2')" *ngIf="visibleSections === 2">PROGRAMMING PARADIGMS</button>
+          <img src="assets/next.png" (click)="showNextSection('s2')" *ngIf="visibleSections === 2" class="next-image" alt="Next">
         </div>
       </div>
     </section>
@@ -52,7 +52,7 @@
         </ul>
   
         <div class="button-container">
-          <button (click)="showNextSection('s3')" *ngIf="visibleSections === 3">WHY DO WE NEED PROGRAMMING PARADIGMS</button>
+          <img src="assets/next.png" (click)="showNextSection('s3')" *ngIf="visibleSections === 3" class="next-image" alt="Next">
         </div>
       </div>
     </section>
@@ -83,7 +83,7 @@
         </div>
       </div>
       <div class="button-container">
-        <button (click)="showNextSection('s4')" *ngIf="visibleSections === 4">CLICK ME</button>
+        <img src="assets/next.png" (click)="showNextSection('s4')" *ngIf="visibleSections === 4" class="next-image" alt="Next">
       </div>
     </section>
   
@@ -130,7 +130,7 @@
         </div>
       </div>
       <div class="button-container">
-        <button (click)="showNextSection('s5')" *ngIf="visibleSections === 5">HISTORY OF OBJECT-ORIENTED PROGRAMMING</button>
+        <img src="assets/next.png" (click)="showNextSection('s5')" *ngIf="visibleSections === 5" class="next-image" alt="Next">
       </div>
     </section>
   
@@ -201,7 +201,7 @@
         <p>From this <strong>CAR</strong> class blueprint, you can create specific car objects, like a <strong>Honda Civic</strong> or <strong>Toyota Corolla</strong>. Each of these car objects would have their own unique values for the attributes, like <strong>red</strong> for their <strong>color</strong> and <strong>2003</strong> for their <strong>model year</strong>, but they would all share the same underlying car-related capabilities in the class. </p>
       </div>
       <div class="button-container">
-        <button (click)="showNextSection('s7')" *ngIf="visibleSections === 7">BENEFITS OF OBJECT-ORIENTED PROGRAMMING</button>
+        <img src="assets/next.png" (click)="showNextSection('s7')" *ngIf="visibleSections === 7" class="next-image" alt="Next">
       </div>
     </section>
   
@@ -248,6 +248,6 @@
       </div>
     </section>
     <div class="button-container">
-      <button routerLink='/lessons/topics/introduction' *ngIf="visibleSections === 8">BACK TO LESSONS</button>
+      <img src="assets/finish.png" class="next-image" (click)="showCompletionPopup()" *ngIf="visibleSections === 8">
     </div>
   </div>

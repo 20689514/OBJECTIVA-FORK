@@ -13,7 +13,7 @@
             <p>In simple words, it's like having a general instruction (e.g., "serve food") that can be carried out differently depending on who is performing it (like a waiter, chef, or delivery person) during the actual execution. The decision happens at runtime, based on the specific object being used.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s2')" *ngIf="visibleSections === 2">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s2')" *ngIf="visibleSections === 2" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -25,7 +25,7 @@
             <p>It's like a child class in a family business redefining how a task (e.g., customer service) is done differently from the parent class, but the task's name and purpose stay the same.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s3')" *ngIf="visibleSections === 3">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s3')" *ngIf="visibleSections === 3" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -67,7 +67,7 @@ public class Main {{'{'}}
             </code></pre>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s4')" *ngIf="visibleSections === 4">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s4')" *ngIf="visibleSections === 4" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -79,7 +79,7 @@ public class Main {{'{'}}
             <p>It's like a restaurant menu listing a general item like "pasta," but the specific preparation (e.g., Alfredo or Marinara) depends on which chef (child class) is in the kitchen.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s5')" *ngIf="visibleSections === 5">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s5')" *ngIf="visibleSections === 5" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -110,7 +110,7 @@ public class Main {{'{'}}
             </code></pre>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s6')" *ngIf="visibleSections === 6">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s6')" *ngIf="visibleSections === 6" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -122,7 +122,7 @@ public class Main {{'{'}}
             <p>It's like a customer at a hotel calling for "room service," and the hotel system deciding at runtime whether to send a waiter, a housekeeping staff, or a technician based on the specific request.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s7')" *ngIf="visibleSections === 7">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s7')" *ngIf="visibleSections === 7" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -165,7 +165,7 @@ public class Main {{'{'}}
             </code></pre>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s8')" *ngIf="visibleSections === 8">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s8')" *ngIf="visibleSections === 8" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -179,7 +179,7 @@ public class Main {{'{'}}
             <p>It's like booking a taxi using a ride-hailing app where the exact car and driver (specific implementation) are only assigned to you when the ride request is processed at the time of pickup.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s9')" *ngIf="visibleSections === 9">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s9')" *ngIf="visibleSections === 9" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -220,7 +220,7 @@ public class Main {{'{'}}
             </code></pre>
         </div>
         <div class="button-container">
-            <button routerLink='/lessons/topics/polymorphism' *ngIf="visibleSections === 10">CLICK ME</button>
+            <img src="assets/finish.png" class="next-image" (click)="showCompletionPopup()" *ngIf="visibleSections === 10">
           </div>
     </section>
 

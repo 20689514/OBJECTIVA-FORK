@@ -1,0 +1,40 @@
+<div class="fill-in-the-blanks">
+    <h2>Fill in the Blanks</h2>
+    <p><strong>Scenario</strong>: You are creating a system for managing bank accounts. Each account should store a balance, but the balance must never be negative.</p>
+    <p>Fill in the blanks to demonstrate data validation:</p>
+    <pre>
+class BankAccount {{'{'}}
+    <span class="comment">// Private field for encapsulation</span>
+    <input type="text" [(ngModel)]="definitions[0].userInput" placeholder="{{ definitions[0].label }}" class="inline-input"/> double balance;
+
+    <span class="comment">// Public getter for balance</span>
+    public double getBalance() {{'{'}}
+        return <input type="text" [(ngModel)]="definitions[1].userInput" placeholder="{{ definitions[1].label }}" class="inline-input"/>;
+    {{'}'}}
+
+    <span class="comment">// Public setter for balance</span>
+    <input type="text" [(ngModel)]="definitions[2].userInput" placeholder="{{ definitions[2].label }}" class="inline-input"/> void setBalance(double balance) {{'{'}}
+        if (balance >= 0) {{'{'}} <span class="comment">// Ensure the balance is not negative</span>
+            this.balance = balance;
+        {{'}'}} 
+        else {{'{'}}
+            System.out.println("Invalid balance value! Balance cannot be negative.");
+        {{'}'}}
+    {{'}'}}
+{{'}'}}
+
+public class Main {{'{'}}
+    public static void main(String[] args) {{'{'}}
+    <input type="text" [(ngModel)]="definitions[3].userInput" placeholder="{{ definitions[3].label }}" class="inline-input"/> account = new <input type="text" [(ngModel)]="definitions[4].userInput" placeholder="{{ definitions[4].label }}" class="inline-input"/>();
+        account.<input type="text" [(ngModel)]="definitions[5].userInput" placeholder="{{ definitions[5].label }}" class="inline-input"/>(100.0); <span class="comment">// Setting valid balance</span>
+        System.out.println("Balance: " + account.<input type="text" [(ngModel)]="definitions[6].userInput" placeholder="{{ definitions[6].label }}" class="inline-input"/>());
+
+        account.<input type="text" [(ngModel)]="definitions[7].userInput" placeholder="{{ definitions[7].label }}" class="inline-input"/>(-50.0); <span class="comment">// Attempting to set invalid balance</span>
+    {{'}'}}
+{{'}'}}
+
+    </pre>
+  
+    <button (click)="validateAnswers()">Submit</button>
+    <button (click)="getHint()">Hint</button>
+  </div>

@@ -17,7 +17,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 @NgModule({
   declarations: [
     AppComponent,
-    LoginRegisterComponent
+    LoginRegisterComponent,
   ],
   imports: [
     BrowserModule,

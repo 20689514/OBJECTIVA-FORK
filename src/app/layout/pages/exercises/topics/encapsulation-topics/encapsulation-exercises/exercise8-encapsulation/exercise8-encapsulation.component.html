@@ -1,0 +1,41 @@
+<div class="fill-in-the-blanks">
+    <h2>Fill in the Blanks</h2>
+    <p><strong>Scenario</strong>: You are designing a system where a parent class has private, protected, and public data. A child class should access these fields appropriately using inheritance and display their values.</p>
+    <p>Fill in the blanks to demonstrate access modifiers:</p>
+    <pre>
+class Parent {{'{'}}
+<input type="text" [(ngModel)]="definitions[0].userInput" placeholder="{{ definitions[0].label }}" class="inline-input"/> String privateData = "Private Data"; 
+<input type="text" [(ngModel)]="definitions[1].userInput" placeholder="{{ definitions[1].label }}" class="inline-input"/> String protectedData = "Protected Data"; 
+<input type="text" [(ngModel)]="definitions[2].userInput" placeholder="{{ definitions[2].label }}" class="inline-input"/> String publicData = "Public Data";
+
+    <span class="comment">// Public method to access private data</span>
+    public String getPrivateData() {{'{'}}
+        return <input type="text" [(ngModel)]="definitions[3].userInput" placeholder="{{ definitions[3].label }}" class="inline-input"/>;
+    {{'}'}}
+{{'}'}}
+
+class Child extends Parent {{'{'}}
+    public void displayData() {{'{'}}
+        <span class="comment">// Cannot directly access privateData</span>
+        System.out.println("Accessing private data via getter: " + <input type="text" [(ngModel)]="definitions[4].userInput" placeholder="{{ definitions[4].label }}" class="inline-input"/>());
+
+        <span class="comment">// Can directly access protectedData</span>
+        System.out.println("Accessing protected data: " + protectedData);
+
+        <span class="comment">// Can directly access publicData</span>
+        System.out.println("Accessing public data: " + publicData);
+    {{'}'}}
+{{'}'}}
+
+public class Main {{'{'}}
+    public static void main(String[] args) {{'{'}}
+    <input type="text" [(ngModel)]="definitions[5].userInput" placeholder="{{ definitions[5].label }}" class="inline-input"/> child = new <input type="text" [(ngModel)]="definitions[6].userInput" placeholder="{{ definitions[6].label }}" class="inline-input"/>();
+        child.displayData();
+    {{'}'}}
+{{'}'}}
+
+    </pre>
+  
+    <button (click)="validateAnswers()">Submit</button>
+    <button (click)="getHint()">Hint</button>
+  </div>

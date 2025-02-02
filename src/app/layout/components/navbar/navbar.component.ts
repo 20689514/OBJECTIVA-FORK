@@ -31,7 +31,7 @@ export class NavbarComponent {
   }
 
   openAccountSettings() {
-    console.log('Open Account Settings');
+    this.router.navigate(['/account-settings']);
   }
 
   logout() {

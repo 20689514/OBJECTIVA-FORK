@@ -11,7 +11,7 @@
             <p>An interface in Java is like a list of rules or tasks that a class must follow. It’s similar to a class but only contains method names (without actual code). When a class uses an interface, it agrees to provide its own code for all the methods in the interface.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s2')" *ngIf="visibleSections === 2">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s2')" *ngIf="visibleSections === 2" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -22,7 +22,7 @@
             <p>To use an interface, a class adds the word <strong>implements</strong> in its definition. This means the class is agreeing to follow the rules and provide code for all the methods listed in the interface.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s3')" *ngIf="visibleSections === 3">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s3')" *ngIf="visibleSections === 3" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -33,7 +33,7 @@
             <p>In Java, multiple interfaces refer to the ability of a class or interface to implement or extend more than one interface.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s4')" *ngIf="visibleSections === 4">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s4')" *ngIf="visibleSections === 4" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -77,7 +77,7 @@ class Smartphone implements Camera, GPS {{'{'}}
             </code></pre>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s5')" *ngIf="visibleSections === 5">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s5')" *ngIf="visibleSections === 5" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -88,7 +88,7 @@ class Smartphone implements Camera, GPS {{'{'}}
             <p>Interfaces are used when you want to define what a class should do, but not how it does it. Abstract classes are used when you want to define common behavior that multiple subclasses can share.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s6')" *ngIf="visibleSections === 6">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s6')" *ngIf="visibleSections === 6" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -119,7 +119,7 @@ class Smartphone implements Camera, GPS {{'{'}}
               </div>
         </div>
         <div class="button-container">
-            <button routerLink='/lessons/topics/abstraction' *ngIf="visibleSections === 7">CLICK ME</button>
+            <img src="assets/finish.png" class="next-image" (click)="showCompletionPopup()" *ngIf="visibleSections === 7">
           </div>
     </section>
 </div>

@@ -1,0 +1,39 @@
+<div class="fill-in-the-blanks">
+    <h2>Fill in the Blanks</h2>
+    <p><strong>Scenario</strong>: You are developing a Coffee Machine that allows users to brew coffee in different ways. The machine should support brewing a standard black coffee, coffee with a specified sugar level, and coffee with both sugar and milk. Implement a brewCoffee() method using method overloading to handle these variations.</p>
+    <p>Fill in the blanks to demonstrate method overloading:</p>
+    <pre>
+class CoffeeMachine {{'{'}}
+    <span class="comment">// Method to brew black coffee</span>
+    <input type="text" [(ngModel)]="definitions[0].userInput" placeholder="{{ definitions[0].label }}" class="inline-input"/> brewCoffee() {{'{'}}
+        System.out.println("Brewing a standard black coffee.");
+    {{'}'}}
+
+    <span class="comment">// Method to brew coffee with sugar level</span>
+    void <input type="text" [(ngModel)]="definitions[1].userInput" placeholder="{{ definitions[1].label }}" class="inline-input"/>(String sugarLevel) {{'{'}}
+        System.out.println("Brewing coffee with " + sugarLevel + " sugar.");
+    {{'}'}}
+
+    <span class="comment">// Method to brew coffee with sugar level and milk option</span>
+    void <input type="text" [(ngModel)]="definitions[2].userInput" placeholder="{{ definitions[2].label }}" class="inline-input"/>(String sugarLevel, boolean withMilk) {{'{'}}
+        String milkText = withMilk ? "with milk" : "without milk";
+        System.out.println("Brewing coffee with " + sugarLevel + " sugar and " + milkText + ".");
+    {{'}'}}
+{{'}'}}
+
+public class CoffeeShop {{'{'}}
+    public static void main(String[] args) {{'{'}}
+    <input type="text" [(ngModel)]="definitions[3].userInput" placeholder="{{ definitions[3].label }}" class="inline-input"/> machine = new CoffeeMachine();
+        
+        machine.<input type="text" [(ngModel)]="definitions[4].userInput" placeholder="{{ definitions[4].label }}" class="inline-input"/>(); <span class="comment">// Calls the first method</span>
+        machine.<input type="text" [(ngModel)]="definitions[5].userInput" placeholder="{{ definitions[5].label }}" class="inline-input"/>("medium"); <span class="comment">// Calls the second method</span>
+        machine.<input type="text" [(ngModel)]="definitions[6].userInput" placeholder="{{ definitions[6].label }}" class="inline-input"/>("low", true); <span class="comment">// Calls the third method</span>
+    {{'}'}}
+{{'}'}}
+
+
+    </pre>
+  
+    <button (click)="validateAnswers()">Submit</button>
+    <button (click)="getHint()">Hint</button>
+  </div>

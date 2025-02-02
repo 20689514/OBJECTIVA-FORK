@@ -13,7 +13,7 @@
             <p>In simple words, an object is like a real-life item created using a blueprint, where the blueprint is the class.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s2')" *ngIf="visibleSections === 2">EXAMPLE</button>
+            <img src="assets/next.png" (click)="showNextSection('s2')" *ngIf="visibleSections === 2" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -24,7 +24,7 @@
             <img src="assets/motor.png" alt="">
             <p>One object could be a classic yellow Honda CB400 with a 400cc engine and another object could be a blue Vespa Sprint S150 with a 150cc engine.</p>
             <div class="button-container">
-                <button (click)="showNextSection('s3')" *ngIf="visibleSections === 3">CLICK ME</button>
+                <img src="assets/next.png" (click)="showNextSection('s3')" *ngIf="visibleSections === 3" class="next-image" alt="Next">
             </div>
         </div>
     </section>
@@ -39,7 +39,7 @@
             <img src="assets/class-objects.png" alt="">
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s4')" *ngIf="visibleSections === 4">CLICK ME</button>
+            <img src="assets/next.png" (click)="showNextSection('s4')" *ngIf="visibleSections === 4" class="next-image" alt="Next">
         </div>
     </section>
 
@@ -54,7 +54,7 @@
         <p>Using this blueprint, you can create <strong>objects</strong>, which are real chairs:</p>
         <img src="assets/object.png" alt="">
         <div class="button-container">
-            <button routerLink='/lessons/topics/introduction' *ngIf="visibleSections === 5">BACK TO LESSONS</button>
+            <img src="assets/finish.png" class="next-image" (click)="showCompletionPopup()" *ngIf="visibleSections === 5">
         </div>
     </section>
 

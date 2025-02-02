@@ -1,0 +1,52 @@
+<div class="fill-in-the-blanks">
+  <h2>Fill in the Blanks</h2>
+  <p><strong>Scenario</strong>: You are creating a system to manage student details. The system should allow storing and retrieving a student's name and age, ensuring the data is private and accessible only through specific methods.</p>
+  <p>Fill in the blanks to demonstrate encapsulation:</p>
+  <pre>
+class Student {{'{'}}
+  <span class="comment">// Private fields for encapsulation</span>
+  <input type="text" [(ngModel)]="definitions[0].userInput" placeholder="{{ definitions[0].label }}" class="inline-input"/> String name;
+  <input type="text" [(ngModel)]="definitions[1].userInput" placeholder="{{ definitions[1].label }}" class="inline-input"/> int age;
+
+  <span class="comment">// Public getter for 'name'</span>
+  <input type="text" [(ngModel)]="definitions[2].userInput" placeholder="{{ definitions[2].label }}" class="inline-input"/> String getName() {{'{'}}
+    return name;
+  {{'}'}}
+
+  <span class="comment">// Public setter for 'name'</span>
+  <input type="text" [(ngModel)]="definitions[3].userInput" placeholder="{{ definitions[3].label }}" class="inline-input"/> void setName(String name) {{'{'}}
+    this.name = name;
+  {{'}'}}
+
+  <span class="comment">// Public getter for 'age'</span>
+  <input type="text" [(ngModel)]="definitions[4].userInput" placeholder="{{ definitions[4].label }}" class="inline-input"/> int getAge() {{'{'}}
+    return age;
+  {{'}'}}
+
+  <span class="comment">// Public setter for 'age'</span>
+  <input type="text" [(ngModel)]="definitions[5].userInput" placeholder="{{ definitions[5].label }}" class="inline-input"/> void setAge(int age) {{'{'}}
+    if (age > 0) {{'{'}} <span class="comment">// Validation to ensure age is positive</span>
+      this.age = age;
+    {{'}'}} 
+    else {{'{'}}
+      System.out.println("Age must be positive!");
+    {{'}'}}
+  {{'}'}}
+{{'}'}}
+
+public class Main {{'{'}}
+    public static void main(String[] args) {{'{'}}
+    <input type="text" [(ngModel)]="definitions[6].userInput" placeholder="{{ definitions[6].label }}" class="inline-input"/> student = new <input type="text" [(ngModel)]="definitions[7].userInput" placeholder="{{ definitions[7].label }}" class="inline-input"/>();
+        student.<input type="text" [(ngModel)]="definitions[8].userInput" placeholder="{{ definitions[8].label }}" class="inline-input"/>("John");
+        student.<input type="text" [(ngModel)]="definitions[9].userInput" placeholder="{{ definitions[9].label }}" class="inline-input"/>(20);
+
+        System.out.println("Name: " + student.getName());
+        System.out.println("Age: " + student.getAge());
+    {{'}'}}
+{{'}'}}
+
+  </pre>
+
+  <button (click)="validateAnswers()">Submit</button>
+  <button (click)="getHint()">Hint</button>
+</div>

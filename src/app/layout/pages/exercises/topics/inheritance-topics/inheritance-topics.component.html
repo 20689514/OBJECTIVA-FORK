@@ -1,0 +1,20 @@
+<div class="header">
+    <i class="fa fa-times close-icon" (click)="closeLesson()"></i>
+    <div class="progress-container">
+      <div class="progress-bar">
+        <div class="progress" [style.width]="progress + '%'"></div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Exercise Components -->
+  <app-exercise1-inheritance *ngIf="currentExercise === 0" (nextExercise)="onNextExercise()"></app-exercise1-inheritance>
+  <app-exercise2-inheritance *ngIf="currentExercise === 1" (nextExercise)="onNextExercise()"></app-exercise2-inheritance>
+  <app-exercise3-inheritance *ngIf="currentExercise === 2" (nextExercise)="onNextExercise()"></app-exercise3-inheritance>
+  <app-exercise4-inheritance *ngIf="currentExercise === 3" (nextExercise)="onNextExercise()"></app-exercise4-inheritance>
+  <app-exercise5-inheritance *ngIf="currentExercise === 4" (nextExercise)="onNextExercise()"></app-exercise5-inheritance>
+  <app-exercise6-inheritance *ngIf="currentExercise === 5" (nextExercise)="onNextExercise()"></app-exercise6-inheritance>
+  <app-exercise7-inheritance *ngIf="currentExercise === 6" (nextExercise)="onNextExercise()"></app-exercise7-inheritance>
+  <app-exercise8-inheritance *ngIf="currentExercise === 7" (nextExercise)="onNextExercise()"></app-exercise8-inheritance>
+  <app-exercise9-inheritance *ngIf="currentExercise === 8" (nextExercise)="onNextExercise()"></app-exercise9-inheritance>
+  <app-exercise10-inheritance *ngIf="currentExercise === 9" (nextExercise)="onNextExercise()"></app-exercise10-inheritance>

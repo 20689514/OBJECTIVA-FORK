@@ -11,7 +11,7 @@
             <p>Getters and setters are methods that provide controlled access to class properties.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s2')" *ngIf="visibleSections === 2">CLICK ME</button>
+          <img src="assets/next.png" (click)="showNextSection('s2')" *ngIf="visibleSections === 2" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -48,7 +48,7 @@
               </div>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s3')" *ngIf="visibleSections === 3">CLICK ME</button>
+          <img src="assets/next.png" (click)="showNextSection('s3')" *ngIf="visibleSections === 3" class="next-image" alt="Next">
           </div>
     </section>
     
@@ -59,7 +59,7 @@
             <p>Getters and setters are named according to the property they access or modify. The naming convention is to use the word <strong>get</strong> followed by the property name for getters and <strong>set</strong> followed by the property name for setters.</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s4')" *ngIf="visibleSections === 4">CLICK ME</button>
+          <img src="assets/next.png" (click)="showNextSection('s4')" *ngIf="visibleSections === 4" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -68,16 +68,16 @@
             <h1>Getters</h1>
             <pre class="line-numbers"><code class="language-java">
 
-get[PropertyName]() 
-is[PropertyName]()  <span class="comment">// for booleans</span>
+get[PropertyName]();
+is[PropertyName]();  <span class="comment">// for booleans</span>
               </code></pre>
               <h1>Setters</h1>
               <pre class="line-numbers"><code class="language-java">
-set[PropertyName](TypeValue)
+set[PropertyName](TypeValue);
               </code></pre>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s5')" *ngIf="visibleSections === 5">CLICK ME</button>
+          <img src="assets/next.png" (click)="showNextSection('s5')" *ngIf="visibleSections === 5" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -119,7 +119,7 @@ set[PropertyName](TypeValue)
               </div>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s6')" *ngIf="visibleSections === 6">CLICK ME</button>
+          <img src="assets/next.png" (click)="showNextSection('s6')" *ngIf="visibleSections === 6" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -140,7 +140,7 @@ public void setName(String name) {{'{'}}
             </code></pre>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s7')" *ngIf="visibleSections === 7">CLICK ME</button>
+          <img src="assets/next.png" (click)="showNextSection('s7')" *ngIf="visibleSections === 7" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -151,7 +151,7 @@ public void setName(String name) {{'{'}}
             <p>Think of getters and setters like a safe deposit box at a bank. The box (private variable) is locked away, but you have special ways to put things in (setters) and take things out (getters).</p>
         </div>
         <div class="button-container">
-            <button (click)="showNextSection('s8')" *ngIf="visibleSections === 8">CLICK ME</button>
+          <img src="assets/next.png" (click)="showNextSection('s8')" *ngIf="visibleSections === 8" class="next-image" alt="Next">
           </div>
     </section>
 
@@ -213,7 +213,7 @@ public class Main {{'{'}}
             </code></pre>
         </div>
         <div class="button-container">
-          <button routerLink='/lessons/topics/encapsulation' *ngIf="visibleSections === 9">BACK TO LESSONS</button>
+          <img src="assets/finish.png" class="next-image" (click)="showCompletionPopup()" *ngIf="visibleSections === 9">
         </div>
     </section>
 </div>
