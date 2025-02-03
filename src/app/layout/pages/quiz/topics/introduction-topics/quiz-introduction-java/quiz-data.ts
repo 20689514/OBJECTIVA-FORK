@@ -6,6 +6,7 @@ export interface QuizData {
     d: string;
     correct: string;
     code?: string;
+    explanation: string;
   }
 export const quizData: QuizData[] = [
     {
@@ -15,6 +16,7 @@ export const quizData: QuizData[] = [
         c: "Bjarne Stroustrup, 1983",
         d: "Guido van Rossum, 1990",
         correct: "b",
+        explanation: "Java was developed by James Gosling at Sun Microsystems in 1991."
     },
     {
         question: "Why is Java called 'Java'?",
@@ -23,6 +25,7 @@ export const quizData: QuizData[] = [
         c: "Named after a coffee bean that inspired its creator.",
         d: "It was an arbitrary name chosen randomly.",
         correct: "c",
+        explanation: "Java was named after the coffee bean by its creators."
     },
     {
         question: "What is Java's primary feature that allows it to run on any platform?",
@@ -31,6 +34,7 @@ export const quizData: QuizData[] = [
         c: "Its security features",
         d: "Its use of pointers",
         correct: "b",
+        explanation: "Java's JVM and bytecode allow it to run on any platform without recompilation."
     },
     {
         question: "Which feature of Java makes it simpler compared to other languages like C++?",
@@ -39,6 +43,7 @@ export const quizData: QuizData[] = [
         c: "Elimination of complex features",
         d: "Incompatibility with C or C++",
         correct: "c",
+        explanation: "Java eliminates complex features like pointers, operator overloading, and multiple inheritance."
     },
     {
         question: "What makes Java secure?",
@@ -47,6 +52,7 @@ export const quizData: QuizData[] = [
         c: "Open access to memory locations",
         d: "No compilation of code",
         correct: "b",
+        explanation: "Java is secure due to the absence of pointers and boundary checks for arrays."
     },
     {
         question: "Which of these is NOT a feature of Java?",
@@ -55,6 +61,7 @@ export const quizData: QuizData[] = [
         c: "High Performance",
         d: "Dependency on OS-specific compilers",
         correct: "d",
+        explanation: "Java is platform-independent and does not depend on OS-specific compilers."
     },
     {
         question: "Which of the following is NOT a Java use case?",
@@ -63,6 +70,7 @@ export const quizData: QuizData[] = [
         c: "Operating system development",
         d: "Internet of Things applications",
         correct: "c",
+        explanation: "Java is not typically used for operating system development."
     },
     {
         question: "What is the starting point of any Java program?",
@@ -71,6 +79,7 @@ export const quizData: QuizData[] = [
         c: "The main method",
         d: "The package declaration",
         correct: "c",
+        explanation: "The main method is the starting point of any Java program."
     },
     {
         question: "What is the correct way to write a single-line comment in Java?",
@@ -79,6 +88,7 @@ export const quizData: QuizData[] = [
         c: "<!-- This is a comment -->",
         d: "/* This is a comment */",
         correct: "b",
+        explanation: "Single-line comments in Java are written using two forward slashes."
     },
     {
         question: "Which of the following is NOT a primitive data type in Java?",
@@ -87,6 +97,7 @@ export const quizData: QuizData[] = [
         c: "String",
         d: "boolean",
         correct: "c",
+        explanation: "String is a reference data type, not a primitive data type in Java."
     },
     {
         question: "Which operator is used for addition in Java?",
@@ -95,6 +106,7 @@ export const quizData: QuizData[] = [
         c: "/",
         d: "=",
         correct: "b",
+        explanation: "The + operator is used for addition in Java."
     },
     {
         question: "What is the purpose of package declarations in Java?",
@@ -103,6 +115,7 @@ export const quizData: QuizData[] = [
         c: "To store primitive data types",
         d: "To write the main method",
         correct: "b",
+        explanation: "Package declarations in Java are used to organize code into folders."
     },
     {
         question: "Which keyword is used to include pre-made code or libraries in Java?",
@@ -111,6 +124,7 @@ export const quizData: QuizData[] = [
         c: "include",
         d: "namespace",
         correct: "b",
+        explanation: "The import keyword is used to include pre-made code or libraries in Java."
     },
     {
         question: "Which principle of OOP allows a child class to reuse code from a parent class?",
@@ -119,6 +133,7 @@ export const quizData: QuizData[] = [
         c: "Encapsulation",
         d: "Inheritance",
         correct: "d",
+        explanation: "Inheritance allows a child class to reuse code from a parent class."
     },
     {
         question: "Which of these describes polymorphism in Java?",
@@ -127,6 +142,7 @@ export const quizData: QuizData[] = [
         c: "One action behaving differently depending on the object",
         d: "Allowing secure access to private variables",
         correct: "c",
+        explanation: "Polymorphism in Java allows one action to behave differently depending on the object."
     },
     {
         question: "What is a class in Java?",
@@ -135,6 +151,7 @@ export const quizData: QuizData[] = [
         c: "A method that initializes variables",
         d: "A reserved keyword",
         correct: "b",
+        explanation: "A class in Java is a blueprint for creating objects."
     },
     {
         question: "What are instance variables in a class?",
@@ -143,6 +160,7 @@ export const quizData: QuizData[] = [
         c: "Variables declared inside a class, and each object has its own copy",
         d: "Constants defined in a class",
         correct: "c",
+        explanation: "Instance variables are declared inside a class, and each object has its own copy."
     },
     {
         question: "Which of the following is NOT true about methods in Java?",
@@ -151,6 +169,7 @@ export const quizData: QuizData[] = [
         c: "Methods cannot take parameters.",
         d: "Methods are defined inside a class.",
         correct: "c",
+        explanation: "Methods in Java can take parameters and perform actions or computations."
     },
     {
         question: "What is the purpose of a constructor in Java?",
@@ -159,6 +178,7 @@ export const quizData: QuizData[] = [
         c: "To initialize objects when they are created",
         d: "To define the blueprint of an object",
         correct: "c",
+        explanation: "Constructors in Java are used to initialize objects when they are created."
     },
     {
         question: "Which statement is correct regarding the default constructor in Java?",
@@ -167,6 +187,7 @@ export const quizData: QuizData[] = [
         c: "It always accepts parameters.",
         d: "It is required to create objects.",
         correct: "b",
+        explanation: "The default constructor in Java sets default values for instance variables."
     },
     {
         question: "What keyword is used to create an instance of a class?",
@@ -175,6 +196,7 @@ export const quizData: QuizData[] = [
         c: "static",
         d: "instanceOf",
         correct: "a",
+        explanation: "The new keyword is used to create an instance of a class in Java."
     },
     {
         question: "What does the 'this' keyword refer to in Java?",
@@ -183,6 +205,7 @@ export const quizData: QuizData[] = [
         c: "The current object instance",
         d: "A reserved keyword for memory allocation",
         correct: "c",
+        explanation: "The 'this' keyword refers to the current object instance in Java."
     },
     {
         question: "Which of the following is an example of a parameterized constructor?",
@@ -199,6 +222,7 @@ export const quizData: QuizData[] = [
 }`, 
         d: "All of the above",
         correct: "b",
+        explanation: "A parameterized constructor takes parameters to initialize object properties."
     },
     {
         question: "What will the following code do?",
@@ -207,6 +231,7 @@ export const quizData: QuizData[] = [
         c: "It creates a blueprint of the Student class.",
         d: "It throws a compilation error if the Student class has no constructor.",
         correct: "a",
+        explanation: "The code creates an object of the Student class.",
         code: `
 Student student1 = new Student();`
     },
@@ -217,6 +242,7 @@ Student student1 = new Student();`
         c: "To display the student's name.",
         d: "To check if the student has passed all subjects.",
         correct: "b",
+        explanation: "The getAcademicStatus() method calculates and returns the student's academic standing based on the GPA.",
         code: `
 public class Student {
     private double gpa;
@@ -247,6 +273,7 @@ public class Student {
         c: "To create new data types",
         d: "To make Java slower",
         correct: "b",
+        explanation: "Java Class Libraries provide a wide range of pre-written classes and methods for developers to use."
     },
     {
         question: "Which class is used for handling text in Java?",
@@ -255,6 +282,7 @@ public class Student {
         c: "Math",
         d: "String",
         correct: "d",
+        explanation: "The String class is used for handling text in Java."
     },
     {
         question: "What method can you use to read a string input from the user using the Scanner class?",
@@ -263,6 +291,7 @@ public class Student {
         c: "nextLine()",
         d: "next()",
         correct: "c",
+        explanation: "The nextLine() method reads a string input from the user using the Scanner class."
     },
     {
         question: "Which of the following is NOT a method of the Math class?",
@@ -271,6 +300,7 @@ public class Student {
         c: "Math.sqrt()",
         d: "Math.add()",
         correct: "d",
+        explanation: "The Math class does not have a method named Math.add()."
     },
     {
         question: "What does the size() method of the ArrayList class return?",
@@ -279,6 +309,7 @@ public class Student {
         c: "The first element in the list",
         d: "The last element in the list",
         correct: "b",
+        explanation: "The size() method of the ArrayList class returns the number of elements in the list."
     },
     {
         question: "Which of the following examples correctly uses the Math class?",
@@ -287,6 +318,7 @@ public class Student {
         c: "String text = Math.concat('Hello', 'World');",
         d: "int random = Math.input();",
         correct: "b",
+        explanation: "The Math class is used for mathematical operations like pow() to calculate powers."
     },
     {
         question: "Which statement about the String class is true?",
@@ -295,6 +327,7 @@ public class Student {
         c: "It provides methods for manipulating text.",
         d: "It is part of the Collections Framework.",
         correct: "c",
+        explanation: "The String class provides methods for manipulating text in Java."
     },
     {
         question: "What is the purpose of the close() method in the Scanner class?",
@@ -303,6 +336,7 @@ public class Student {
         c: "To reset the Scanner object",
         d: "To add new input to the Scanner",
         correct: "b",
+        explanation: "The close() method in the Scanner class releases resources used by the Scanner object."
     },
     {
         question: "What does the following code print?",
@@ -311,6 +345,7 @@ public class Student {
         c: "Hello, Java!",
         d: "Error",
         correct: "b",
+        explanation: "The toUpperCase() method converts the string to uppercase.",
         code: `
 String text = "Hello, Java!";
 System.out.println(text.toUpperCase());`
@@ -322,6 +357,7 @@ System.out.println(text.toUpperCase());`
         c: "Math",
         d: "String",
         correct: "b",
+        explanation: "The ArrayList class is part of the Java Collections Framework."
     },
     {
         question: "What does the get() method of the ArrayList class do?",
@@ -330,6 +366,7 @@ System.out.println(text.toUpperCase());`
         c: "Retrieves an element at a specific index",
         d: "Clears all elements from the list",
         correct: "c",
+        explanation: "The get() method of the ArrayList class retrieves an element at a specific index."
     },
     {
         question: "What is an ArrayList in Java?",
@@ -338,6 +375,7 @@ System.out.println(text.toUpperCase());`
         c: "A two-dimensional array",
         d: "A collection of characters",
         correct: "b",
+        explanation: "An ArrayList in Java is a dynamic array that can grow and shrink in size."
     },
     {
         question: "What is the correct syntax for importing the Scanner class?",
@@ -346,5 +384,6 @@ System.out.println(text.toUpperCase());`
         c: "import java.util.Scanner;",
         d: "Scanner java.util;",
         correct: "c",
+        explanation: "The correct syntax for importing the Scanner class is import java.util.Scanner;."
     }
 ];

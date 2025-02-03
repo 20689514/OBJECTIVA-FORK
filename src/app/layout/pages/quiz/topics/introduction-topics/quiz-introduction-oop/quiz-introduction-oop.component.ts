@@ -26,70 +26,89 @@ export class QuizIntroductionOopComponent implements OnInit {
     selectedAnswer: string | null = null; // Tracks the selected answer
     answerOptions: { id: string; text: string }[] = [];
   
-    ngOnInit(): void {
-      this.quizData = this.getRandomQuestions(quizData, 25);
-      this.loadQuiz();
-    }
-  
-    getRandomQuestions(data: QuizData[], count: number): QuizData[] {
-      const shuffled = data.sort(() => 0.5 - Math.random());
-      return shuffled.slice(0, count);
-    }
-  
-    loadQuiz(): void {
-      this.selectedAnswer = null; // Reset the selected answer
-      const currentQuizData = this.quizData[this.currentQuiz];
-      this.answerOptions = [
-        { id: 'a', text: currentQuizData.a },
-        { id: 'b', text: currentQuizData.b },
-        { id: 'c', text: currentQuizData.c },
-        { id: 'd', text: currentQuizData.d },
-      ];
-    }
-  
-    onSubmit(): void {
-      if (this.selectedAnswer) {
-          if (this.selectedAnswer === this.quizData[this.currentQuiz].correct) {
-              this.score++;
-          }
-  
-          this.currentQuiz++;
-          if (this.currentQuiz < this.quizData.length) {
-              this.loadQuiz();
-          } else {
-              this.showScore = true;
-              this.generateFeedback();
-              
-              this.quizService.getCurrentScore('introduction-oop').subscribe({
-                  next: (currentScore) => {
-                      console.log('Current score:', currentScore);
-                      console.log('New score:', this.score);
-                      
-                      if (currentScore === null || this.score > currentScore) {
-                          console.log('Saving new score:', this.score);
-                          this.quizService.saveScore('introduction-oop', this.score, this.quizData.length)
-                              .subscribe({
-                                  next: (response) => {
-                                      console.log('Score saved successfully', response);
-                                      if (currentScore !== null && this.score > currentScore) {
-                                        this.higher = 'Excellent! Your score is greater than your current score which means you have improved!';
-                                      }   
-                                  },
-                                  error: (error) => {
-                                      console.error('Error saving score:', error);
-                                  }
-                              });
-                      } else {
-                          console.log('New score is not higher than current score, not saving.');
-                      }
-                  },
-                  error: (error) => {
-                      console.error('Error fetching current score:', error);
-                  }
-              });
-          }
+     // NEW
+      showExplanation = false;
+      isAnswerCorrect = false;
+      hasSubmitted = false;
+    
+      ngOnInit(): void {
+        this.quizData = this.getRandomQuestions(quizData, 25);
+        this.loadQuiz();
       }
-  }
+    
+      getRandomQuestions(data: QuizData[], count: number): QuizData[] {
+        const shuffled = data.sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, count);
+      }
+    
+      loadQuiz(): void {
+        this.selectedAnswer = null; // Reset selected answer when loading a new question
+        this.hasSubmitted = false;  // Ensure submit state is reset
+        this.showExplanation = false; // Hide explanation
+      
+        const currentQuizData = this.quizData[this.currentQuiz];
+        this.answerOptions = [
+          { id: 'a', text: currentQuizData.a },
+          { id: 'b', text: currentQuizData.b },
+          { id: 'c', text: currentQuizData.c },
+          { id: 'd', text: currentQuizData.d },
+        ];
+      }
+      
+    
+      onSubmit(): void {
+        if (this.selectedAnswer) {
+          this.isAnswerCorrect = this.selectedAnswer === this.quizData[this.currentQuiz].correct;
+          this.showExplanation = true;
+          this.hasSubmitted = true;
+          
+          if (this.isAnswerCorrect) {
+            this.score++;
+          }
+        }
+      }
+    
+      nextQuestion(): void {
+        this.currentQuiz++;
+        this.selectedAnswer = null;  // Reset selected answer
+        this.hasSubmitted = false;   // Reset submit state
+        this.showExplanation = false; // Hide explanation
+      
+        if (this.currentQuiz < this.quizData.length) {
+          this.loadQuiz();
+        } else {
+          this.showScore = true;
+          this.generateFeedback();
+          
+          this.quizService.getCurrentScore('introduction-oop').subscribe({
+            next: (currentScore) => {
+              if (currentScore === null || this.score > currentScore) {
+                this.quizService.saveScore('introduction-oop', this.score, this.quizData.length)
+                  .subscribe({
+                    next: (response) => {
+                      if (currentScore !== null && this.score > currentScore) {
+                        this.higher = 'Excellent! Your score is greater than your current score which means you have improved!';
+                      }
+                    },
+                    error: (error) => console.error('Error saving score:', error)
+                  });
+              }
+            },
+            error: (error) => console.error('Error fetching current score:', error)
+          });
+        }
+      }
+      
+    
+      resetQuiz(): void {
+        this.currentQuiz = 0;
+        this.score = 0;
+        this.showScore = false;
+        this.selectedAnswer = null;
+        this.showExplanation = false;
+        this.hasSubmitted = false;
+        this.loadQuiz();
+      }
     higher: string = '';
     feedback: string = '';
     generateFeedback(): void {
@@ -178,13 +197,7 @@ export class QuizIntroductionOopComponent implements OnInit {
       this.feedback = feedback;
   }
   
-  
-    resetQuiz(): void {
-      this.currentQuiz = 0;
-      this.score = 0;
-      this.showScore = false;
-      this.loadQuiz();
-    }
+
     backtoQuiz(){
       this.router.navigate(['/quiz']); 
     }

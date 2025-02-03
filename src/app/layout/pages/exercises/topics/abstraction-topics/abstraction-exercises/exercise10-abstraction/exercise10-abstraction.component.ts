@@ -22,75 +22,79 @@ export class Exercise10AbstractionComponent {
   hintIndex: number;
   hints: string[];
     
-      getHint(): void {
-          if (this.hintIndex < this.hints.length) {
-            Swal.fire({
-              title: "Hint",
-              text: this.hints[this.hintIndex],
-              icon: "info",
-              confirmButtonText: "OK",
-            });
-            this.hintIndex++;
-          } else {
-            Swal.fire({
-              title: "No More Hints",
-              text: "You've used all your hints!",
-              icon: "warning",
-              confirmButtonText: "Got it",
-            });
-          }
-        }
-      definitions = [
-        { id: 1, label: '', userInput: '' },
-        { id: 2, label: '', userInput: '' },
-        { id: 3, label: '', userInput: '' },
-        { id: 4, label: '', userInput: '' },
-        { id: 5, label: '', userInput: '' },
-        { id: 6, label: '', userInput: '' },
-        { id: 7, label: '', userInput: '' },
-        { id: 8, label: '', userInput: '' },
-      ];
-    
-      concepts = [
-        { id: 1, name: 'abstract' },
-        { id: 2, name: 'abstract' },
-        { id: 3, name: 'Vehicle' },
-        { id: 4, name: 'Vehicle' },
-        { id: 5, name: 'car' },
-        { id: 6, name: 'car' },
-        { id: 7, name: 'motorcycle' },
-        { id: 8, name: 'motorcycle' },
-
-      ];
-    
-      validateAnswers() {
-        const isAllCorrect = this.definitions.every((definition) => {
-          const correctConcept = this.concepts.find(
-            (concept) => concept.id === definition.id
-          );
-          return (
-            definition.userInput.trim() &&
-            correctConcept &&
-            correctConcept.name === definition.userInput.trim()
-          );
+  getHint(): void {
+      if (this.hintIndex < this.hints.length) {
+        Swal.fire({
+          title: "Hint",
+          text: this.hints[this.hintIndex],
+          icon: "info",
+          confirmButtonText: "OK",
         });
-    
-        if (isAllCorrect) {
-          Swal.fire({
-            icon: 'success',
-            title: 'Well Done!',
-            text: 'All answers are correct!',
-          }).then(() => {
-            this.nextExercise.emit();
-            this.router.navigate(['/exercises']);
-
-          });
-        } else {
-          Swal.fire({
-            icon: 'error',
-            title: 'Try Again!',
-            text: 'Some answers are incorrect. Please check and try again!',
-          });
-        }
+        this.hintIndex++;
+      } else {
+        Swal.fire({
+          title: "No More Hints",
+          text: "You've used all your hints!",
+          icon: "warning",
+          confirmButtonText: "Got it",
+        });
       }
+    }
+  definitions = [
+    { id: 1, label: '', userInput: '' },
+    { id: 2, label: '', userInput: '' },
+    { id: 3, label: '', userInput: '' },
+    { id: 4, label: '', userInput: '' },
+    { id: 5, label: '', userInput: '' },
+    { id: 6, label: '', userInput: '' },
+    { id: 7, label: '', userInput: '' },
+    { id: 8, label: '', userInput: '' },
+  ];
+
+  concepts = [
+    { id: 1, name: 'abstract' },
+    { id: 2, name: 'abstract' },
+    { id: 3, name: 'Vehicle' },
+    { id: 4, name: 'Vehicle' },
+    { id: 5, name: 'car' },
+    { id: 6, name: 'car' },
+    { id: 7, name: 'motorcycle' },
+    { id: 8, name: 'motorcycle' },
+
+  ];
+
+  isLastQuestion = true;
+  validateAnswers() {
+    const isAllCorrect = this.definitions.every((definition) => {
+      const correctConcept = this.concepts.find(
+        (concept) => concept.id === definition.id
+      );
+      return (
+        definition.userInput.trim() &&
+        correctConcept &&
+        correctConcept.name === definition.userInput.trim()
+      );
+    });
+
+    if (isAllCorrect) {
+      if (this.isLastQuestion) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Congratulations!',
+          text: 'All answers are correct! You have successfully completed all exercises!',
+        }).then(() => {
+          this.router.navigate(['/exercises']); // Adjust the route as needed
+        });
+      } else {
+        Swal.fire({
+          icon: 'success',
+          title: 'Well Done!',
+          text: 'All answers are correct!',
+        }).then(() => {
+          this.nextExercise.emit();
+          this.router.navigate(['/exercises']);
+        });
+      }
+    }
+  }
 }

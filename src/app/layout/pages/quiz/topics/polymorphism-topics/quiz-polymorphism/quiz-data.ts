@@ -6,6 +6,7 @@ export interface QuizData {
     d: string;
     correct: string;
     code?: string;
+    explanation: string;
   }
 export const quizData: QuizData[] = [
     {
@@ -14,7 +15,8 @@ export const quizData: QuizData[] = [
         b: "The ability of one type to take multiple forms.",
         c: "A way to write complex code.",
         d: "A method to override parent classes.",
-        correct: "b"
+        correct: "b",
+        explanation: "Polymorphism allows objects to be treated as instances of their parent class or as their own class. This flexibility is a key feature of object-oriented programming."
     },
     {
         question: "Name the two types of polymorphism in Java.",
@@ -22,7 +24,8 @@ export const quizData: QuizData[] = [
         b: "Early and Late",
         c: "Compile-time and Runtime",
         d: "Both A and C",
-        correct: "d"
+        correct: "d",
+        explanation: "Static polymorphism is resolved at compile time, while dynamic polymorphism is resolved at runtime."
     },
     {
         question: "What is another name for static polymorphism?",
@@ -30,7 +33,8 @@ export const quizData: QuizData[] = [
         b: "Late Binding",
         c: "Compile-time Polymorphism",
         d: "Method Overriding",
-        correct: "c"
+        correct: "c",
+        explanation: "Static polymorphism is also known as compile-time polymorphism because method resolution occurs during compilation."
     },
     {
         question: "What is another name for dynamic polymorphism?",
@@ -38,7 +42,8 @@ export const quizData: QuizData[] = [
         b: "Method Overloading",
         c: "Runtime Polymorphism",
         d: "Early Binding",
-        correct: "c"
+        correct: "c",
+        explanation: "Dynamic polymorphism is also known as runtime polymorphism because method resolution occurs during program execution."
     },
     {
         question: "What is method overloading?",
@@ -46,7 +51,8 @@ export const quizData: QuizData[] = [
         b: "Overriding methods from a parent class.",
         c: "Using methods without parameters.",
         d: "None of the above.",
-        correct: "a"
+        correct: "a",
+        explanation: "Method overloading allows multiple methods with the same name but different parameters to be defined in the same class."
     },
     {
         question: "How does constructor overloading differ from method overloading?",
@@ -54,7 +60,8 @@ export const quizData: QuizData[] = [
         b: "Constructor overloading applies to constructors only.",
         c: "Method overloading applies to constructors only.",
         d: "Both are the same.",
-        correct: "b"
+        correct: "b",
+        explanation: "Constructor overloading allows multiple constructors with different parameters to be defined in the same class."
     },
     {
         question: "Does Java support operator overloading explicitly?",
@@ -62,7 +69,8 @@ export const quizData: QuizData[] = [
         b: "No",
         c: "Only for addition",
         d: "Only for subtraction",
-        correct: "b"
+        correct: "b",
+        explanation: "Java does not support operator overloading for user-defined classes, unlike some other languages like C++."
     },
     {
         question: "What is type promotion in method overloading?",
@@ -70,7 +78,8 @@ export const quizData: QuizData[] = [
         b: "Automatically converting a smaller data type to a larger one.",
         c: "Promoting methods to the parent class.",
         d: "None of the above.",
-        correct: "b"
+        correct: "b",
+        explanation: "Type promotion in method overloading automatically converts smaller data types to larger ones to match the method signature."
     },
     {
         question: "What is method overriding?",
@@ -78,7 +87,8 @@ export const quizData: QuizData[] = [
         b: "Methods in the same class with different parameters.",
         c: "Methods in the same class with no parameters.",
         d: "None of the above.",
-        correct: "a"
+        correct: "a",
+        explanation: "Method overriding occurs when a subclass provides a specific implementation of a method defined in its parent class."
     },
     {
         question: "What determines which overridden method is executed at runtime?",
@@ -86,7 +96,8 @@ export const quizData: QuizData[] = [
         b: "The actual object type.",
         c: "The compiler.",
         d: "None of the above.",
-        correct: "b"
+        correct: "b",
+        explanation: "The actual object type determines which overridden method is executed at runtime, not the reference type."
     },
     {
         question: "What is dynamic method dispatch?",
@@ -94,7 +105,8 @@ export const quizData: QuizData[] = [
         b: "Resolving overridden methods at runtime.",
         c: "Invoking methods based on static reference types.",
         d: "None of the above.",
-        correct: "b"
+        correct: "b",
+        explanation: "Dynamic method dispatch is the mechanism by which the correct overridden method is called at runtime."
     },
     {
         question: "What is late binding?",
@@ -102,7 +114,8 @@ export const quizData: QuizData[] = [
         b: "Resolving overridden methods during runtime.",
         c: "Resolving static methods during runtime.",
         d: "None of the above.",
-        correct: "b"
+        correct: "b",
+        explanation: "Late binding refers to resolving overridden methods at runtime, allowing for dynamic polymorphism."
     },
     {
         question: "Which of the following is NOT a benefit of polymorphism?",
@@ -110,7 +123,8 @@ export const quizData: QuizData[] = [
         b: "Flexibility",
         c: "Fixed behavior",
         d: "Easier maintenance",
-        correct: "c"
+        correct: "c",
+        explanation: "Polymorphism allows for flexible behavior based on object types, not fixed behavior."
     },
     {
         question: "How does polymorphism enhance maintainability?",
@@ -118,7 +132,8 @@ export const quizData: QuizData[] = [
         b: "By using the same method for different objects.",
         c: "By avoiding dynamic behavior.",
         d: "By simplifying logic.",
-        correct: "b"
+        correct: "b",
+        explanation: "Polymorphism enhances maintainability by allowing the same method to be used for different objects, reducing code duplication."
     },
     {
         question: "What allows objects to share methods and behave differently as needed?",
@@ -126,7 +141,8 @@ export const quizData: QuizData[] = [
         b: "Polymorphism",
         c: "Encapsulation",
         d: "Inheritance",
-        correct: "b"
+        correct: "b",
+        explanation: "Polymorphism allows objects to share methods from a common interface or parent class while providing unique implementations."
     },
     {
         question: "Which access modifier is required for method overriding?",
@@ -134,7 +150,8 @@ export const quizData: QuizData[] = [
         b: "public",
         c: "protected or public",
         d: "No modifier",
-        correct: "c"
+        correct: "c",
+        explanation: "Methods must be declared as protected or public in the parent class to be overridden in a subclass."
     },
     {
         question: "Can static methods be overridden in Java?",
@@ -142,7 +159,8 @@ export const quizData: QuizData[] = [
         b: "No",
         c: "Only if marked final",
         d: "Only if in the same package",
-        correct: "b"
+        correct: "b",
+        explanation: "Static methods cannot be overridden in Java because they are resolved at compile time, not runtime."
     },
     {
         question: "What happens if the parent and child classes have the same method but different return types?",
@@ -150,7 +168,8 @@ export const quizData: QuizData[] = [
         b: "It results in overriding.",
         c: "It’s allowed only if the return types are covariant.",
         d: "It results in overloading.",
-        correct: "c"
+        correct: "c",
+        explanation: "Covariant return types allow the child class method to return a subclass of the parent class method's return type."
     },
     {
         question: "What is a covariant return type?",
@@ -158,7 +177,8 @@ export const quizData: QuizData[] = [
         b: "A return type that is a subclass of the parent class's return type.",
         c: "A completely different return type.",
         d: "None of the above.",
-        correct: "b"
+        correct: "b",
+        explanation: "A covariant return type allows a subclass method to return a more specific type than the parent class method."
     },
     {
         question: "Why is polymorphism important in real-world applications?",
@@ -166,7 +186,8 @@ export const quizData: QuizData[] = [
         b: "It allows flexibility and reusable code.",
         c: "It improves hardware performance.",
         d: "It makes debugging easier.",
-        correct: "b"
+        correct: "b",
+        explanation: "Polymorphism provides flexibility and code reusability, making it easier to maintain and extend software applications."
     },
     {
         question: "Which of the following is an example of polymorphism in Java?",
@@ -174,7 +195,8 @@ export const quizData: QuizData[] = [
         b: "Method overriding",
         c: "Interfaces",
         d: "All of the above",
-        correct: "d"
+        correct: "d",
+        explanation: "Method overloading, method overriding, and interfaces are all examples of polymorphism in Java."
     },
     {
         question: "How can polymorphism reduce code redundancy?",
@@ -182,7 +204,8 @@ export const quizData: QuizData[] = [
         b: "By using inheritance and overriding.",
         c: "By avoiding abstraction.",
         d: "By ignoring dynamic behavior.",
-        correct: "b"
+        correct: "b",
+        explanation: "Polymorphism allows methods to be shared among objects, reducing the need for duplicate code."
     },
     {
         question: "Can an interface support polymorphism?",
@@ -190,7 +213,8 @@ export const quizData: QuizData[] = [
         b: "No",
         c: "Only with abstract classes",
         d: "None of the above",
-        correct: "a"
+        correct: "a",
+        explanation: "Interfaces can support polymorphism by allowing objects to be treated as instances of the interface."
     },
     {
         question: "Which of the following cannot be used as a return type for method overriding?",
@@ -198,7 +222,8 @@ export const quizData: QuizData[] = [
         b: "Primitive data types",
         c: "Unrelated types",
         d: "Abstract classes",
-        correct: "c"
+        correct: "c",
+        explanation: "Method overriding requires a return type that is a subclass of the parent class method's return type."
     },
     {
         question: "What happens if the overridden method in the parent class throws an exception, but the child class method does not?",
@@ -206,7 +231,8 @@ export const quizData: QuizData[] = [
         b: "It is allowed",
         c: "The exception is ignored",
         d: "Runtime error",
-        correct: "b"
+        correct: "b",
+        explanation: "A child class method can throw fewer exceptions or no exceptions compared to the parent class method."
     },
     {
         question: "Which type of polymorphism is implemented using interfaces in Java?",
@@ -214,7 +240,8 @@ export const quizData: QuizData[] = [
         b: "Dynamic",
         c: "Compile-time",
         d: "None of the above",
-        correct: "b"
+        correct: "b",
+        explanation: "Dynamic polymorphism is achieved through method overriding, which is often implemented using interfaces in Java."
     },
     {
         question: "What is the role of the super keyword in method overriding?",
@@ -222,7 +249,8 @@ export const quizData: QuizData[] = [
         b: "Prevents overriding.",
         c: "Refers to the current object.",
         d: "Creates a new method.",
-        correct: "a"
+        correct: "a",
+        explanation: "The super keyword is used to call the parent class's method from the child class's overridden method."
     },
     {
         question: "Why can't private methods be overridden?",
@@ -230,7 +258,8 @@ export const quizData: QuizData[] = [
         b: "They are final by default.",
         c: "They are not visible in subclasses.",
         d: "None of the above.",
-        correct: "c"
+        correct: "c",
+        explanation: "Private methods are not visible in subclasses, so they cannot be overridden."
     },
     {
         question: "How does polymorphism promote scalability in software?",
@@ -238,7 +267,8 @@ export const quizData: QuizData[] = [
         b: "By supporting dynamic behavior",
         c: "By limiting flexibility",
         d: "By avoiding inheritance",
-        correct: "b"
+        correct: "b",
+        explanation: "Polymorphism allows for dynamic behavior, making software more adaptable to changes and scalable."
     },
     {
         question: "Which design principle is directly supported by polymorphism?",
@@ -246,7 +276,8 @@ export const quizData: QuizData[] = [
         b: "Code reuse",
         c: "Open-Closed Principle",
         d: "Single Responsibility Principle",
-        correct: "c"
+        correct: "c",
+        explanation: "The Open-Closed Principle states that software entities should be open for extension but closed for modification, which is supported by polymorphism."
     },
     {
         question: "Why is polymorphism considered an OOP pillar?",
@@ -254,7 +285,8 @@ export const quizData: QuizData[] = [
         b: "It integrates other OOP concepts.",
         c: "It is used in procedural programming.",
         d: "It works without objects.",
-        correct: "b"
+        correct: "b",
+        explanation: "Polymorphism is a key feature of object-oriented programming that integrates with other OOP concepts like inheritance and encapsulation."
     },
     {
         question: "Which of the following can break polymorphism?",
@@ -262,7 +294,8 @@ export const quizData: QuizData[] = [
         b: "Interfaces",
         c: "Abstract classes",
         d: "Method overloading",
-        correct: "a"
+        correct: "a",
+        explanation: "Final methods cannot be overridden, which can break polymorphism by restricting dynamic behavior."
     },
     {
         question: "What is required to implement polymorphism in real-world applications?",
@@ -270,7 +303,8 @@ export const quizData: QuizData[] = [
         b: "Having a parent-child class relationship",
         c: "Avoiding dynamic behavior",
         d: "Using primitive types",
-        correct: "b"
+        correct: "b",
+        explanation: "Polymorphism is implemented through inheritance and method overriding, which require a parent-child class relationship."
     },
     {
         question: "What does it mean if a reference variable is 'polymorphic'?",
@@ -278,7 +312,8 @@ export const quizData: QuizData[] = [
         b: "It is restricted to one type only.",
         c: "It cannot access overridden methods.",
         d: "It is only used for interfaces.",
-        correct: "a"
+        correct: "a",
+        explanation: "A polymorphic reference variable can hold objects of different types, allowing for dynamic behavior."
     },
     {
         question: "Which of these is an example of dynamic polymorphism?",
@@ -286,7 +321,8 @@ export const quizData: QuizData[] = [
         b: "A subclass overriding a parent class method",
         c: "A method with no parameters",
         d: "A private method",
-        correct: "b"
+        correct: "b",
+        explanation: "Dynamic polymorphism occurs when a subclass provides a specific implementation of a method defined in its parent class."
     },
     {
         question: "Why is method overriding commonly used in frameworks?",
@@ -294,7 +330,8 @@ export const quizData: QuizData[] = [
         b: "To allow customization of behavior",
         c: "To eliminate inheritance",
         d: "To restrict dynamic behavior",
-        correct: "b"
+        correct: "b",
+        explanation: "Method overriding allows subclasses to provide specific implementations of parent class methods, enabling customization of behavior in frameworks."
     },
     {
         question: "What happens when an overridden method in a child class is called using a parent class reference?",
@@ -302,7 +339,8 @@ export const quizData: QuizData[] = [
         b: "The child's version is executed.",
         c: "Both versions are executed.",
         d: "Compilation error.",
-        correct: "b"
+        correct: "b",
+        explanation: "When an overridden method is called using a parent class reference, the child class's version is executed due to dynamic polymorphism."
     },
     {
         question: "Which keyword should be used to avoid breaking polymorphism in a subclass?",
@@ -310,7 +348,8 @@ export const quizData: QuizData[] = [
         b: "static",
         c: "protected",
         d: "private",
-        correct: "c"
+        correct: "c",
+        explanation: "The protected keyword allows subclasses to access and override methods without breaking polymorphism."
     },
     {
         question: "How does polymorphism simplify API design?",
@@ -318,7 +357,8 @@ export const quizData: QuizData[] = [
         b: "By allowing a single interface for multiple implementations",
         c: "By avoiding inheritance",
         d: "By promoting static methods",
-        correct: "b"
+        correct: "b",
+        explanation: "Polymorphism simplifies API design by allowing a single interface to be used for multiple implementations, promoting flexibility and code reuse."
     },
     {
         question: "Which keyword prevents a method from being overridden?",
@@ -326,7 +366,8 @@ export const quizData: QuizData[] = [
         b: "static",
         c: "protected",
         d: "private",
-        correct: "a"
+        correct: "a",
+        explanation: "The final keyword prevents a method from being overridden in a subclass, ensuring fixed behavior."
     },
     { // code problem 1
         question: "What is the output of the following code about the zoo management system scenario?",
@@ -335,6 +376,7 @@ export const quizData: QuizData[] = [
         c: "Meow",
         d: "Compilation error",
         correct: "b",
+        explanation: "The code demonstrates polymorphism by calling the makeSound method of the Dog class through a reference to the Animal class.",
         code: `class Animal {
     public void makeSound() {
         System.out.println("Some generic animal sound");
@@ -380,7 +422,8 @@ public class Main {
         Payment payment = new CreditCard(); // Polymorphism: Parent reference, child object
         payment.processPayment();
     }
-}`
+}`,
+        explanation: "The code demonstrates polymorphism by calling the processPayment method of the CreditCard class through a reference to the Payment class."
     },
     { // code problem 3
         question: "What is the output of the following code about the online store scenario?",
@@ -407,7 +450,8 @@ public class Main {
         Discount discount = new SeasonalDiscount(); // Polymorphism: Parent reference, child object
         discount.applyDiscount();
     }
-}`
+}`,
+        explanation: "The code demonstrates polymorphism by calling the applyDiscount method of the SeasonalDiscount class through a reference to the Discount class."
     },
     { // code problem 4
         question: "What is the output of the following code about the transportation system scenario?",
@@ -434,7 +478,8 @@ public class Main {
         Vehicle vehicle = new Car(); // Polymorphism: Parent reference, child object
         vehicle.startEngine();
     }
-}`
+}`,
+        explanation: "The code demonstrates polymorphism by calling the startEngine method of the Car class through a reference to the Vehicle class."
     },
     { // code problem 5
         question: "What is the output of the following code in the company scenario?",
@@ -459,7 +504,8 @@ public class Main {
         Employee employee = new Manager(); // Polymorphism: Parent reference, child object
         employee.work();
     }
-}`
+}`,
+        explanation: "The code demonstrates polymorphism by calling the work method of the Manager class through a reference to the Employee class."
     },
     { // code problem 6
         question: "What is the output of the following code about the media player scenario?",
@@ -493,7 +539,8 @@ public class Main {
         media1.play();
         media2.play();
     }
-}`
+}`,
+        explanation: "The code demonstrates polymorphism by calling the play method of the Audio and Video classes through references to the Media class."
     },
     { // quetion problem 1
         question: "Which feature of polymorphism allows an interface to be implemented in multiple ways?",
@@ -501,7 +548,8 @@ public class Main {
         b: "Method overriding",
         c: "Dynamic method dispatch",
         d: "Both B and C",
-        correct: "d"
+        correct: "d",
+        explanation: "Method overriding and dynamic method dispatch allow interfaces to be implemented in multiple ways, providing flexibility and code reusability in Java."
     },
     { // quetion problem 2
         question: "Which of the following statements is true about method overloading?",
@@ -509,7 +557,8 @@ public class Main {
         b: "It depends on different method names.",
         c: "It only applies to static methods.",
         d: "Runtime error",
-        correct: "c"
+        correct: "c",
+        explanation: "Method overloading allows multiple methods with the same name but different parameters to be defined in the same class, including static methods."
     },
     { // quetion problem 3
         question: "What is the primary advantage of dynamic polymorphism?",
@@ -517,7 +566,8 @@ public class Main {
         b: "It increases memory consumption.",
         c: "It enables flexibility by allowing method calls to be resolved at runtime.",
         d: "It prevents subclasses from modifying parent class behavior.",
-        correct: "c"
+        correct: "c",
+        explanation: "Dynamic polymorphism enables flexibility by allowing method calls to be resolved at runtime based on the actual object type, promoting dynamic behavior and code reusability."
     },
     { // quetion problem 4
         question: "What is the main advantage of polymorphism?",
@@ -525,7 +575,8 @@ public class Main {
         b: "Improves performance",
         c: "Allows for code that works with multiple data types in a uniform way",
         d: "Increases code complexity",
-        correct: "c"
+        correct: "c",
+        explanation: "Polymorphism allows code to work with multiple data types in a uniform way, promoting flexibility and code reusability."
     },
     { // quetion problem 5
         question: "What happens if two overloaded methods have the same parameters but different return types?",
@@ -533,7 +584,8 @@ public class Main {
         b: "The method with the larger return type is chosen",
         c: "Runtime error",
         d: "The method with the smaller return type is chosen",
-        correct: "a"
+        correct: "a",
+        explanation: "Overloaded methods must have different parameter lists, including the return type, to avoid compilation errors."
     },
     { // quetion problem 6
         question: "Which of the following best describes how polymorphism works in Java?",
@@ -541,7 +593,8 @@ public class Main {
         b: "It forces all subclasses to have the same",
         c: "It prevents method overriding",
         d: "It enables different classes to share a common interface while having unique behaviors ",
-        correct: "d"
+        correct: "d",
+        explanation: "Polymorphism allows different classes to share a common interface while providing unique implementations, promoting code reusability and flexibility."
     },
     { // quetion problem 7
         question: "Which of the following statements about method overloading is true?",
@@ -549,7 +602,8 @@ public class Main {
         b: "Overloaded methods must have different parameter lists ",
         c: "Overloaded methods must have the same return type",
         d: "Overloaded methods must belong to different classes",
-        correct: "b"
+        correct: "b",
+        explanation: "Method overloading allows multiple methods with the same name but different parameters to be defined in the same class, promoting code reusability and flexibility."
     },
     { // quetion problem 8
         question: "Which of the following can be overloaded in Java?",
@@ -557,7 +611,8 @@ public class Main {
         b: "Methods",
         c: "Operators (partially, for built-in classes)",
         d: "All of the above",
-        correct: "d"
+        correct: "d",
+        explanation: "Constructors, methods, and operators can be overloaded in Java, allowing for flexibility and code reusability in object-oriented programming."
     },
     { // quetion problem 9
         question: "What is required for method overriding to occur?",
@@ -565,7 +620,8 @@ public class Main {
         b: "The method name must be different",
         c: "The method in the child class must have the same name and parameter list as the parent class method",
         d: "The method in the child class must be private",
-        correct: "c"
+        correct: "c",
+        explanation: "Method overriding occurs when a subclass provides a specific implementation of a method defined in its parent class, using the same method name and parameter list."
     },
     { // quetion problem 10
         question: "How does polymorphism improve reusability?",
@@ -573,7 +629,8 @@ public class Main {
         b: "A single method can work for different object types ",
         c: "It forces developers to write separate code for each type of object",
         d: "It makes code more difficult to extend",
-        correct: "b"
+        correct: "b",
+        explanation: "Polymorphism allows a single method to work for different object types, promoting code reusability and reducing redundancy."
     },
     { // quetion problem 11
         question: "How does polymorphism support dynamic behavior?",
@@ -581,7 +638,8 @@ public class Main {
         b: "It forces all method calls to be statically bound",
         c: "The method that gets executed is determined at runtime based on the object type",
         d: "It makes method calls slower",
-        correct: "c"
+        correct: "c",
+        explanation: "Polymorphism allows the method that gets executed to be determined at runtime based on the actual object type, promoting dynamic behavior and flexibility."
     },
     { // quetion problem 12
         question: "What is the output of the following code?",
@@ -608,6 +666,8 @@ public class Main {
         Parent parent = new Child();
         parent.display();
     }
-}`
-    }
+}`,
+        explanation: "The code demonstrates polymorphism by calling the display method of the Child class through a reference to the Parent class."
+    },
+    
 ];

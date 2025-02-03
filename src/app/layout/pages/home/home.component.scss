@@ -147,6 +147,7 @@ hr {
     font-size: 20px;
   }
   .lesson-container .card-container .face.face2 .content a{
+    font-size: 15px;
     margin: 15px 0 0;
     display: inline-block;
     text-decoration: none;
@@ -154,10 +155,16 @@ hr {
     font-weight: 900;
     padding: 5px;
     border: 1px solid #333;
+    background-color: #ffffff; /* Yellow color */
+    color: #0a102d;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: transform 0.6s ease;
   }
   .lesson-container .card-container .face.face2 .content a:hover{
-    background: #0a102d;
-    color: #fff;
+    background-color: #0a102d;
+    color: #ffffff;
+    transform: translateY(-2px);
   }
     .lesson-home-card{
       width: 350px;
@@ -296,3 +303,20 @@ hr {
   width: 320px; /* Adjust as needed */
 }
 
+.exercise-container {
+  button{
+    background-color: #ffffff; /* Yellow color */
+    color: #0a102d;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: 1px solid #0a102d;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.6s ease;
+  }
+  button:hover{
+    background-color: #0a102d;
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
+}

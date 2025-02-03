@@ -21,6 +21,9 @@ export class HomeComponent {
   toQuiz() { 
     this.router.navigate(['/quiz']);
   }
+  toExercise(){
+    this.router.navigate(['/exercises']);
+  }
 
   selectDifficulty(difficulty: string) {
     this.selectedDifficulty = difficulty;

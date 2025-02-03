@@ -4,12 +4,16 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { isPlatformBrowser } from '@angular/common';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  private apiUrl = 'http://127.0.0.1:8000/api'; // Replace with your API's base URL
+  // private apiUrl = 'http://127.0.0.1:8000/api'; // Replace with your API's base URL
+
+  private loginUrl = environment.loginUrl;
+  private registerUrl = environment.registerUrl;
 
   constructor(
     private http: HttpClient,
@@ -18,7 +22,7 @@ export class AuthService {
   ) {}
 
   login(email: string, password: string): Observable<any> {
-    return this.http.post(`${this.apiUrl}/login`, { email, password }).pipe(
+    return this.http.post(this.loginUrl, { email, password }).pipe(
       map((response: any) => {
         if (response && response.token) {
           if (isPlatformBrowser(this.platformId)) {
@@ -35,7 +39,7 @@ export class AuthService {
   }
 
   register(user: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/register`, user);
+    return this.http.post(this.registerUrl, user);
   }
 
   logout(): void {
